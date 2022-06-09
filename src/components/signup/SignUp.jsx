@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { Button, Form, Container } from 'react-bootstrap';
 import axios from 'axios';
 import classes from './SignUp.module.css';
+import CircleSpinner from '../spinners/CircleSpinner';
 
 const SignUp = () => {
   const navigate = useNavigate();
@@ -11,6 +12,18 @@ const SignUp = () => {
   const [password, setPassword] = useState('');
   const [passwordConfirmation, setPasswordConfirmation] = useState('');
   const [errorMessage, setErrorMessage] = useState('');
+  const [loading, setLoading] = useState(false);
+  const [successfullSignUp, setSuccessfullSignUp] = useState(false);
+
+  const signUpButtonContent = () => {
+    if (!loading && !successfullSignUp) {
+      return 'Sign Up';
+    }
+    if (successfullSignUp) {
+      return 'Account Created!';
+    }
+    return <CircleSpinner />;
+  };
 
   useEffect(() => {
     setErrorMessage('');
@@ -22,9 +35,10 @@ const SignUp = () => {
       setErrorMessage('Passwords do not match!');
       return;
     }
+    setLoading(true);
     try {
       const { data } = await axios({
-        url: 'https://resorts-booking-api.herokuapp.com/auth/register',
+        url: 'http://127.0.0.1:3000/auth/register',
         method: 'POST',
         data: {
           name,
@@ -33,12 +47,17 @@ const SignUp = () => {
           password_confirmation: passwordConfirmation,
         },
       });
+      setLoading(false);
       if (data.error) {
         setErrorMessage(data.error);
         return;
       }
-      navigate('/login');
+      setSuccessfullSignUp(true);
+      setInterval(() => {
+        navigate('/');
+      }, 2500);
     } catch (err) {
+      setLoading(false);
       setErrorMessage(err.message);
     }
   };
@@ -100,8 +119,9 @@ const SignUp = () => {
             variant="primary"
             type="submit"
             className={classes.submit_btn}
+            id="sign-up-btn"
           >
-            Sign Up
+            {signUpButtonContent()}
           </Button>
         </Form>
       </Container>
