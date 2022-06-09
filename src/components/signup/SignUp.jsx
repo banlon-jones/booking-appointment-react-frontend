@@ -38,7 +38,7 @@ const SignUp = () => {
     setLoading(true);
     try {
       const { data } = await axios({
-        url: 'http://127.0.0.1:3000/auth/register',
+        url: 'https://resorts-booking-api.herokuapp.com/auth/register',
         method: 'POST',
         data: {
           name,
@@ -55,7 +55,7 @@ const SignUp = () => {
       setSuccessfullSignUp(true);
       setInterval(() => {
         navigate('/');
-      }, 2500);
+      }, 2000);
     } catch (err) {
       setLoading(false);
       setErrorMessage(err.message);
@@ -77,7 +77,6 @@ const SignUp = () => {
               onChange={(e) => setName(e.target.value)}
               required
             />
-            <span>{name}</span>
           </Form.Group>
           <Form.Group className="mb-3" controlId="formBasicEmail">
             <Form.Label>Email address</Form.Label>
@@ -88,7 +87,6 @@ const SignUp = () => {
               onChange={(e) => setEmail(e.target.value)}
               required
             />
-            <span>{email}</span>
           </Form.Group>
           <Form.Group className="mb-3" controlId="formBasicPassword">
             <Form.Label>Password</Form.Label>
@@ -99,7 +97,6 @@ const SignUp = () => {
               onChange={(e) => setPassword(e.target.value)}
               required
             />
-            <span>{password}</span>
           </Form.Group>
           <Form.Group
             className="mb-3"
@@ -113,7 +110,6 @@ const SignUp = () => {
               onChange={(e) => setPasswordConfirmation(e.target.value)}
               required
             />
-            <span>{passwordConfirmation}</span>
           </Form.Group>
           <Button
             variant="primary"

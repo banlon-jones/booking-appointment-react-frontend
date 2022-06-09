@@ -5,6 +5,7 @@ import { Button, Form, Container } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
 import classes from './LogIn.module.css';
 import { logInUser } from '../../store/user/user';
+import CircleSpinner from '../spinners/CircleSpinner';
 
 const LogIn = () => {
   const dispatch = useDispatch();
@@ -12,16 +13,25 @@ const LogIn = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [errorMessage, setErrorMessage] = useState('');
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
     setErrorMessage('');
   }, [email, password]);
 
+  const logInButtonContent = () => {
+    if (!loading) {
+      return 'Log In';
+    }
+    return <CircleSpinner />;
+  };
+
   const loginUser = async (e) => {
     e.preventDefault();
     try {
+      setLoading(true);
       const { data } = await axios({
-        url: 'http://localhost:3000/auth/login',
+        url: 'https://resorts-booking-api.herokuapp.com/auth/login',
         method: 'POST',
         data: {
           email,
@@ -36,6 +46,7 @@ const LogIn = () => {
       dispatch(logInUser());
       navigate('/');
     } catch (err) {
+      setLoading(false);
       const apiErrorMessages = {
         emailErr: 'User with provided email not found!',
         passwordErr: 'Incorrect password provided!',
@@ -64,7 +75,6 @@ const LogIn = () => {
               onChange={(e) => setEmail(e.target.value)}
               required
             />
-            <span>{email}</span>
           </Form.Group>
           <Form.Group className="mb-3" controlId="formBasicPassword">
             <Form.Label>Password</Form.Label>
@@ -75,14 +85,13 @@ const LogIn = () => {
               onChange={(e) => setPassword(e.target.value)}
               required
             />
-            <span>{password}</span>
           </Form.Group>
           <Button
             variant="primary"
             type="submit"
             className={classes.submit_btn}
           >
-            Log In
+            {logInButtonContent()}
           </Button>
         </Form>
       </Container>
