@@ -11,7 +11,7 @@
 .form_container {
   margin-top: 5rem;
   padding: 1rem;
-  box-shadow: 0rem 0.7rem 0.9rem black;
+  box-shadow: 0 0.7rem 0.9rem black;
   border-radius: 1rem;
   background-image: url('../../assets/images/splash-screen.webp');
   background-repeat: no-repeat;
@@ -53,7 +53,7 @@ span {
 .submit_btn {
   display: block;
   margin-inline: auto;
-  padding: .5rem 3rem;
+  padding: 0.5rem 3rem;
 }
 
 @media screen and (max-width: 1200px) {
