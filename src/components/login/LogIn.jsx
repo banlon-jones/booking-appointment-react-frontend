@@ -2,6 +2,7 @@ import axios from 'axios';
 import React, { useState, useEffect } from 'react';
 import { Button, Form, Container } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
+import classes from './LogIn.module.css';
 
 const LogIn = () => {
   const navigate = useNavigate();
@@ -24,11 +25,11 @@ const LogIn = () => {
           password,
         },
       });
-      console.log(data);
       if (data.error) {
         setErrorMessage(data.error);
         return;
       }
+      navigate('/')
     } catch (err) {
       const apiErrorMessages = {
         emailErr: 'User with email provided email not found!',
