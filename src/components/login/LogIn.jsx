@@ -1,10 +1,13 @@
 import axios from 'axios';
 import React, { useState, useEffect } from 'react';
+import { useDispatch } from 'react-redux';
 import { Button, Form, Container } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
 import classes from './LogIn.module.css';
+import { logInUser } from '../../store/user/user';
 
 const LogIn = () => {
+  const dispatch = useDispatch();
   const navigate = useNavigate();
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -29,10 +32,12 @@ const LogIn = () => {
         setErrorMessage(data.error);
         return;
       }
-      navigate('/')
+      sessionStorage.setItem('JwtAccessToken', JSON.stringify(data));
+      dispatch(logInUser());
+      navigate('/');
     } catch (err) {
       const apiErrorMessages = {
-        emailErr: 'User with email provided email not found!',
+        emailErr: 'User with provided email not found!',
         passwordErr: 'Incorrect password provided!',
       };
       const { error } = err.response.data;
