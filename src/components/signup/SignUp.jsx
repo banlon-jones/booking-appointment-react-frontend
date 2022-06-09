@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Button, Form, Container } from 'react-bootstrap';
 import axios from 'axios';
+import classes from './SignUp.module.css';
 
 const SignUp = () => {
   const navigate = useNavigate();
@@ -17,7 +18,7 @@ const SignUp = () => {
 
   const registerUser = async (e) => {
     e.preventDefault();
-    if (password != passwordConfirmation) {
+    if (password !== passwordConfirmation) {
       setErrorMessage('Passwords do not match!');
       return;
     }
