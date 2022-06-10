@@ -1,14 +1,11 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import logo from '../logo.jpg';
-import SignUp from '../signup/SignUp';
-import LogIn from '../login/LogIn';
-
 import './Nav.css';
 
 const Nav = () => {
   const [isMobile, setIsMobile] = useState(false);
-  
+
 
   return (
     <div className="navigation-panel">
@@ -22,9 +19,11 @@ const Nav = () => {
         >
           <img src={logo} alt="Logo" className="logo" />
           <div className="nav-btn-holder">
-            <button className="button-sign-log" type="submit">
-              Log in
-            </button>
+            <Link to="/login">
+              <button className="button-sign-log" type="submit">
+                Log in
+              </button>
+            </Link>
             <button className="button-sign-log" type="submit">
               Sign up
             </button>
