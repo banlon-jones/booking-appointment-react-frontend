@@ -4,7 +4,7 @@ import { useDispatch } from 'react-redux';
 import { Button, Form, Container } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
 import classes from './LogIn.module.css';
-import { logInUser } from '../../store/user/user';
+import { logInUser, setRole } from '../../store/user/user';
 import CircleSpinner from '../spinners/CircleSpinner';
 
 const LogIn = () => {
@@ -31,7 +31,7 @@ const LogIn = () => {
     try {
       setLoading(true);
       const { data } = await axios({
-        url: 'https://resorts-booking-api.herokuapp.com/auth/login',
+        url: 'http://127.0.0.1:3000/auth/login',
         method: 'POST',
         data: {
           email,
@@ -42,8 +42,9 @@ const LogIn = () => {
         setErrorMessage(data.error);
         return;
       }
-      sessionStorage.setItem('JwtAccessToken', JSON.stringify(data));
+      sessionStorage.setItem('JwtAccessToken', data);
       dispatch(logInUser());
+      dispatch(setRole());
       navigate('/');
     } catch (err) {
       setLoading(false);
