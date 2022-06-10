@@ -24,9 +24,11 @@ const Nav = () => {
                 Log in
               </button>
             </Link>
-            <button className="button-sign-log" type="submit">
-              Sign up
-            </button>
+            <Link to="/sign-up">
+              <button className="button-sign-log" type="submit">
+                Sign up
+              </button>
+            </Link>
             <button
               className="button-icon"
               type="submit"
@@ -44,7 +46,7 @@ const Nav = () => {
       <nav>
         <ul className={isMobile ? 'show-mobile-menu' : 'hide-mobile-menu'}>
           <li className="nav-list">
-            <Link className="nav-link link-style" to="/model">
+            <Link className="nav-link link-style" to="/resorts">
               Resorts
             </Link>
           </li>

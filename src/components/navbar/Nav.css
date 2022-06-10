@@ -35,11 +35,13 @@ ul {
 }
 
 .navigation-panel {
+  position: fixed;
+  top: 0;
+  top: 0;
   width: 100vw;
   height: 100vh;
   padding: 0;
   border: 1px solid #cacac8;
-  background-color: rgba(255, 255, 255, 0.5);
 }
 
 .nav-icons-holder {
@@ -89,10 +91,12 @@ ul {
 nav {
   font-size: 20px;
   font-weight: 700;
+  height: 100vh;
 }
 
 .nav-list {
   padding: 0.5rem 0;
+  background:rgba(255, 255, 255, 1);
 }
 
 .nav-list:hover {
