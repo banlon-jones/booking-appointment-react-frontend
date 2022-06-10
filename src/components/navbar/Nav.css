@@ -37,7 +37,7 @@ ul {
 .navigation-panel {
   position: fixed;
   top: 0;
-  top: 0;
+  left: 0;
   width: 100vw;
   height: 100vh;
   padding: 0;
@@ -96,7 +96,7 @@ nav {
 
 .nav-list {
   padding: 0.5rem 0;
-  background:rgba(255, 255, 255, 1);
+  background: rgba(255, 255, 255, 1);
 }
 
 .nav-list:hover {
