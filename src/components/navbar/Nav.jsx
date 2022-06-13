@@ -6,7 +6,6 @@ import './Nav.css';
 const Nav = () => {
   const [isMobile, setIsMobile] = useState(false);
 
-
   return (
     <div className="navigation-panel">
       <header>
