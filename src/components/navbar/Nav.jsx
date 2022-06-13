@@ -51,18 +51,23 @@ const Nav = () => {
             </Link>
           </li>
           <li className="nav-list">
+            <Link className="nav-link link-style" to="/reserve">
+              Reserve
+            </Link>
+          </li>
+          <li className="nav-list">
             <Link className="nav-link link-style" to="/myreseravtions">
               My reservations
             </Link>
           </li>
           <li className="nav-list">
             <Link className="nav-link link-style" to="/addItem">
-              Add car
+              Add resort
             </Link>
           </li>
           <li className="nav-list">
             <Link className="nav-link link-style" to="/deleteItem">
-              Delete car
+              Delete resort
             </Link>
           </li>
         </ul>
