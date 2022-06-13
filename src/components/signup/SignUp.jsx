@@ -54,7 +54,7 @@ const SignUp = () => {
       }
       setSuccessfullSignUp(true);
       setInterval(() => {
-        navigate('/');
+        navigate('/login');
       }, 2000);
     } catch (err) {
       setLoading(false);
