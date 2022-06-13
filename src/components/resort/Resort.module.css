@@ -1,5 +1,6 @@
 .resort_container {
   display: flex;
+  padding-top: 50px;
   gap: 40px;
 }
 
