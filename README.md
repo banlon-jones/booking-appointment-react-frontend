@@ -1,70 +1,83 @@
-# Getting Started with Create React App
+![](https://img.shields.io/badge/Microverse-blueviolet)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Resorts Booking Front-end App
 
-## Available Scripts
+> This is a front-end for a resorts booking web app. In this app, users can see available resorts, reserve resorts, and see own reservations. Users with admin role can also create, update and delete resorts.
 
-In the project directory, you can run:
+![](./src/assets/img/demo.gif)
 
-### `npm start`
+## Built With
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- Javascript
+- React
+- Redux
+- React-BootStrap
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Live Demo
+[View live](https://resorts-booking.netlify.app/)
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Getting Started
 
-### `npm run build`
+To run this application please follow these steps:
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- Install Node.js ^14.0
+- clone the repository by running\
+    `git clone https://github.com/banlon-jones/booking-appointment-react-frontend`
+- navigate to the folder\
+    `cd booking-appointment-react-frontend`
+- Install packages\
+    `npm install`
+- run the application\
+    `npm start`
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## Authors
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+👤 **Adorn Choga**
 
-### `npm run eject`
+- GitHub: [@AdornChoga](https://github.com/AdornChoga)
+- Twitter: [@adornchoga](https://twitter.com/adorn_choga)
+- LinkedIn: [@adornchoga](https://www.linkedin.com/in/adorn-choga)
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+👤 **Banlon Jones**.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- Github: [banlon-jones](https://github.com/banlon-jones)
+- Twitter: [@banlonj](https://twitter.com/banlonjones)
+- LinkedIn: [banlon jones](https://www.linkedin.com/in/banlon-jones-b0205812a)
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+👤 **Kanu Mike**
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- GitHub: [@Ginohmk](https://github.com/Ginohmk)
+- Twitter: [@michotall95](https://www.twitter.com/michotall95)
+- LinkedIn: [@kanumike](https://www.linkedin.com/in/kanu-mike-497119211/)
+- Instagram: [@savy_kanu_mike](https/instagram.com/savy_kanu_mike)
+- Facebook: [@mike.kanu](https://www.facebook.com/mike.kanu)
 
-## Learn More
+👤 **Tekle Gebreyohannes**
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- GitHub: [@gtekle](https://github.com/gtekle)
+- LinkedIn: [LinkedIn](https://linkedin.com/in/gtekle)
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+👤 **Vana Seraydarian**
 
-### Code Splitting
+- GitHub: [github](https://github.com/VSeray)
+- Twitter: [twitter](https://twitter.com/home)
+- LinkedIn: [Linkdin](https://www.linkedin.com/in/vana-seraydarian-936687191/?lipi=urn%3Ali%3Apage%3Ad_flagship3_feed%3BNyso4dw6Tz6UBL%2Fqkjvtvw%3D%3D)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## 🤝 Contributing
 
-### Analyzing the Bundle Size
+Contributions, issues, and feature requests are welcome!
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Feel free to check the [issues page](../../issues/).
 
-### Making a Progressive Web App
+## Show your support
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+Give a ⭐️ if you like this project!
 
-### Advanced Configuration
+## Acknowledgments
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+- We would like to extend our gratitude to [Murat Korkmaz](https://www.behance.net/muratk) for the original [design](https://www.behance.net/gallery/26425031/Vespa-Responsive-Redesign) idea.
 
-### Deployment
+## 📝 License
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+This project is [MIT](./MIT.md) licensed.
