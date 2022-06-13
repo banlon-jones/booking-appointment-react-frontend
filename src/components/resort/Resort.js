@@ -54,7 +54,7 @@ function Resort() {
               type="button"
               className={resortClass.button_container}
               onClick={() => {
-                navigate(`/resorts/${resortDetails.id}`);
+                navigate(`/reserve/${resortDetails.id}`);
               }}
             >
               Reserve
