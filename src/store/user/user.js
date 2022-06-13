@@ -3,7 +3,7 @@ import axios from 'axios';
 
 const setRole = createAsyncThunk('setRole', async () => {
   if (sessionStorage.getItem('JwtAccessToken')) {
-    const url = 'http://127.0.0.1:3000/user-role';
+    const url = 'http://127.0.0.1:3001/user-role';
     try {
       const { data } = await axios.post(
         url,
