@@ -20,9 +20,10 @@ const resortDetailSlice = createSlice({
   extraReducers: {},
 });
 
-export const getResort = () => async (dispatch) => {
+export const getResort = (id) => async (dispatch) => {
+  const url = `http://localhost:3001/resorts/${id}`;
   try {
-    const response = await fetch('http://localhost:3001/resorts/8');
+    const response = await fetch(url);
     const data = await response.json();
     dispatch(resortDetailSlice.actions.isSuccess(data.resort));
   } catch (error) {

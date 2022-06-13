@@ -4,7 +4,7 @@
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { BsChevronRight } from 'react-icons/bs';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import {
   selectResort,
   getResort,
@@ -14,10 +14,10 @@ import resortClass from './Resort.module.css';
 function Resort() {
   const navigate = useNavigate();
   const dispatch = useDispatch();
-  // GEt id with use params and pass it to getResort()
-  //  Also remove the state from the reducer
+  const { id } = useParams();
+
   useEffect(() => {
-    dispatch(getResort());
+    dispatch(getResort(id));
   }, []);
 
   const user = useSelector((state) => state.user);
