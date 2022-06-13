@@ -20,6 +20,7 @@ function Resort() {
     dispatch(getResort());
   }, []);
 
+  const user = useSelector((state) => state.user);
   const resortDetails = useSelector(selectResort);
   return (
     <div className={resortClass.resort_container}>
@@ -63,6 +64,7 @@ function Resort() {
             <button
               type="button"
               className={resortClass.button_container}
+              style={{ display: user.role === 'admin' ? 'block' : 'none' }}
               onClick={() => {
                 navigate(`/resort-update/${resortDetails.id}`);
               }}
