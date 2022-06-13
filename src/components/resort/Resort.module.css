@@ -92,12 +92,6 @@ img {
 }
 
 @media screen and (max-width: 768px) {
-  nav {
-    height: 100%;
-    width: 100%;
-    font-size: 2em;
-  }
-
   .resort_container,
   .inner_container {
     flex-direction: column;

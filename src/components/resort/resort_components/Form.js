@@ -84,7 +84,9 @@ function Form(props) {
             defaultValue={setRestoreValue('image')}
           />
         </div>
-        <button type="submit">{buttonDescription}</button>
+        <button type="submit" className={AddResort.button_resort_add}>
+          {buttonDescription}
+        </button>
       </form>
     </>
   );

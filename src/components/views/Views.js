@@ -12,8 +12,8 @@ const Views = () => (
     <Route index element={<Resorts />} />
     <Route path="/sign-up" element={<SignUp />} />
     <Route path="/login" element={<LogIn />} />
-    <Route path="/resorts" element={<Resort />} />
     <Route path="/additem" element={<AddResort />} />
+    <Route path="/resorts/:id" element={<Resort />} />
     <Route path="/resort-update/:id" element={<UpdateResort />} />
   </Routes>
 );

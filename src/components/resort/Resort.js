@@ -60,7 +60,6 @@ function Resort() {
               Reserve
               <BsChevronRight className={resortClass.icon} />
             </button>
-            {/* User Role condition for admin right placed here to update */}
             <button
               type="button"
               className={resortClass.button_container}
