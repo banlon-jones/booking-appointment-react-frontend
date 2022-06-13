@@ -5,6 +5,7 @@ import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { BsChevronRight } from 'react-icons/bs';
 import { useNavigate, useParams } from 'react-router-dom';
+import { setRole } from '../../store/user/user';
 import {
   selectResort,
   getResort,
@@ -18,6 +19,7 @@ function Resort() {
 
   useEffect(() => {
     dispatch(getResort(id));
+    dispatch(setRole());
   }, []);
 
   const user = useSelector((state) => state.user);
