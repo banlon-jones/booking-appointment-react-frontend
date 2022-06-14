@@ -16,7 +16,6 @@
 ## Live Demo
 [View live](https://resorts-booking.netlify.app/)
 
-
 ## Getting Started
 
 To run this application please follow these steps:
@@ -81,3 +80,4 @@ Give a ⭐️ if you like this project!
 ## 📝 License
 
 This project is [MIT](./MIT.md) licensed.
+

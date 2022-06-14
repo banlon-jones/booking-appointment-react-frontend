@@ -3,7 +3,7 @@ import axios from 'axios';
 
 const setRole = createAsyncThunk('setRole', async () => {
   if (sessionStorage.getItem('JwtAccessToken')) {
-    const url = 'http://127.0.0.1:3000/user-role';
+    const url = 'https://resorts-booking-api.herokuapp.com/user-role';
     try {
       const { data } = await axios.post(
         url,
@@ -16,7 +16,7 @@ const setRole = createAsyncThunk('setRole', async () => {
       );
       return data.role;
     } catch (e) {
-      console.log(e);
+      return '';
     }
   }
   return '';
