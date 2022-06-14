@@ -77,6 +77,30 @@ img {
   padding: 1rem;
 }
 
+.current_resorts_list li:hover {
+  outline: 1px solid lightblue;
+}
+
+.current_resorts_list li a {
+  text-decoration: none;
+  cursor: pointer;
+  text-align: center;
+}
+
+.current_resorts_list li .resort_name {
+  color: rgb(85, 84, 84);
+  text-transform: uppercase;
+  font-size: 2em;
+  font-weight: 700;
+  margin-top: 1.2em;
+}
+
+.current_resorts_list li .resort_description {
+  color: rgb(32, 32, 32);
+  font-size: 1.2em;
+  margin-top: 1.2em;
+}
+
 .resort_details {
   text-align: right;
 }
