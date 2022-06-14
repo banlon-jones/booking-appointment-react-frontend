@@ -70,6 +70,19 @@ ul {
   border: 1px solid #000;
 }
 
+.button-sign-logout {
+  padding: 0.3rem;
+  margin-left: 12rem;
+  border: 1px solid #97bf11;
+  border-radius: 4px;
+  font-size: 12px;
+}
+
+.button-sign-logout:hover {
+  background-color: #97bf11;
+  border: 1px solid #000;
+}
+
 .button-icon {
   display: block;
   background: none;

@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
+import { logOutUser } from '../../store/user/user';
 import logo from '../logo.jpg';
 import './Nav.css';
 
@@ -48,6 +49,11 @@ const Nav = () => {
       )}
       {loggedIn && (
         <nav>
+          {logOutUser && (
+            <button className="button-sign-logout" type="submit">
+              Log out
+            </button>
+         )}
         <ul className={isMobile ? 'show-mobile-menu' : 'hide-mobile-menu'}>
           <li className="nav-list">
             <Link className="nav-link link-style" to="/resorts">
