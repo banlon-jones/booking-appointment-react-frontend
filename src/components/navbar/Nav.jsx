@@ -8,11 +8,11 @@ import './Nav.css';
 const Nav = () => {
   const dispatch = useDispatch();
   const [isMobile, setIsMobile] = useState(false);
-  const { loggedIn } = useSelector((state) => state.user)
+  const { loggedIn } = useSelector((state) => state.user);
 
   return (
     <div className="navigation-panel">
-        <header>
+      <header>
         <div
           className={
             isMobile
@@ -23,71 +23,74 @@ const Nav = () => {
           <img src={logo} alt="Logo" className="logo" />
           <div className="nav-btn-holder">
             {!loggedIn && (
-             <> <Link to="/login">
-              <button className="button-sign-log" type="submit">
-                Log in
-              </button>
-            </Link>
-            <Link to="/sign-up">
-              <button className="button-sign-log" type="submit">
-                Sign up
-              </button>
-            </Link> </>
+              <>
+                <Link to="/login">
+                  <button className="button-sign-log" type="submit">
+                    Log in
+                  </button>
+                </Link>
+                <Link to="/sign-up">
+                  <button className="button-sign-log" type="submit">
+                    Sign up
+                  </button>
+                </Link>
+              </>
             )}
             {loggedIn && (
               <button
-              className="button-icon"
-              type="submit"
-              onClick={() => setIsMobile(!isMobile)}
-            >
-              {isMobile ? (
-                <i className="fas fa-times fa-2x" />
-              ) : (
-                <i className="fas fa-bars fa-2x" />
-              )}
-            </button>
+                className="button-icon"
+                type="submit"
+                onClick={() => setIsMobile(!isMobile)}
+              >
+                {isMobile ? (
+                  <i className="fas fa-times fa-2x" />
+                ) : (
+                  <i className="fas fa-bars fa-2x" />
+                )}
+              </button>
             )}
           </div>
         </div>
       </header>
       {loggedIn && (
         <nav>
-        <ul className={isMobile ? 'show-mobile-menu' : 'hide-mobile-menu'}>
-          <li className="nav-list">
-            <Link className="nav-link link-style" to="/resorts">
-              Resorts
-            </Link>
-          </li>
-          <li className="nav-list">
-            <Link className="nav-link link-style" to="/reserve">
-              Reserve
-            </Link>
-          </li>
-          <li className="nav-list">
-            <Link className="nav-link link-style" to="/reservations">
-              My reservations
-            </Link>
-          </li>
-          <li className="nav-list">
-            <Link className="nav-link link-style" to="/addItem">
-              Add resort
-            </Link>
-          </li>
-          <li className="nav-list">
-            <Link className="nav-link link-style" to="/deleteResorts">
-              Delete resort
-            </Link>
-          </li>
-          <li>
-            <button 
-              className="button-sign-logout" type="button" 
-              onClick={() => dispatch(logOutUser())}
-            >
-              Log out
-            </button>
-          </li>
-        </ul>
-      </nav>
+          <ul className={isMobile ? 'show-mobile-menu' : 'hide-mobile-menu'}>
+            <li className="nav-list">
+              <Link className="nav-link link-style" to="/resorts">
+                Resorts
+              </Link>
+            </li>
+            <li className="nav-list">
+              <Link className="nav-link link-style" to="/reserve">
+                Reserve
+              </Link>
+            </li>
+            <li className="nav-list">
+              <Link className="nav-link link-style" to="/reservations">
+                My reservations
+              </Link>
+            </li>
+            <li className="nav-list">
+              <Link className="nav-link link-style" to="/addItem">
+                Add resort
+              </Link>
+            </li>
+            <li className="nav-list">
+              <Link className="nav-link link-style" to="/deleteResorts">
+                Delete resort
+              </Link>
+            </li>
+            <li>
+              <button
+                className="button-sign-logout"
+                type="button"
+                onClick={() => dispatch(logOutUser())}
+              >
+                Log out
+              </button>
+            </li>
+          </ul>
+        </nav>
       )}
       <footer className={isMobile ? 'show-mobile-menu' : 'hide-mobile-menu'}>
         <ul className="footer-ul ul-style">
