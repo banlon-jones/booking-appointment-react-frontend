@@ -1,24 +1,25 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { useNavigate, Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import Image from 'react-bootstrap/Image';
+import classes from './Resorts.module.css';
 
 const Resort = (props) => {
   const { resort } = props;
-  const navigate = useNavigate();
+  const detailsUrl = `/resorts/${resort.id}`;
 
   return (
-    <Link to="/resorts/${resort.id}">
+    <Link to={detailsUrl}>
       <Image roundedCircle src={resort.image} alt={resort.name} />
-      <h3>{resort.name}</h3>
-      <p>{resort.description}</p>
-      <button type="button" onClick={() => navigate('/resorts')}>Show details</button>
+      <h2 className={classes.resort_name}>{resort.name}</h2>
+      <p className={classes.resort_description}>{resort.description}</p>
     </Link>
   );
 };
 
 Resort.propTypes = {
   resort: PropTypes.shape({
+    id: PropTypes.number.isRequired,
     name: PropTypes.string.isRequired,
     description: PropTypes.string.isRequired,
     image: PropTypes.string.isRequired,
