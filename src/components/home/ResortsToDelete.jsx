@@ -51,11 +51,17 @@ const ResortsToDelete = () => {
 
   return (
     <div>
-      <ul className={classes.resorts_container}>
+      <ul className={classes.resorts_to_delete_container}>
         {resorts.map((resort) => (
-          <li key={resort.id}>
+          <li key={resort.id} className={classes.resort_to_delete}>
             {resort.name}
-            <button type="button" onClick={() => deleteResort(resort.id)}>delete</button>
+            <button
+              type="button"
+              onClick={() => deleteResort(resort.id)}
+              className={classes.btn_delete_resort}
+            >
+              delete
+            </button>
           </li>
         ))}
       </ul>
