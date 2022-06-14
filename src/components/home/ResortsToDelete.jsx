@@ -13,6 +13,38 @@ const ResortsToDelete = () => {
   const [errorMessage, setErrorMessage] = useState('');
   const [loading, setLoading] = useState(false);
 
+  const fetchResorts = async () => {
+    try {
+      setLoading(true);
+      const { data } = await axios({
+        url: 'https://resorts-booking-api.herokuapp.com/resorts',
+        method: 'GET',
+        headers: {
+          authorization: sessionStorage.getItem('JwtAccessToken'),
+        },
+      });
+      if (data.error) {
+        setErrorMessage(data.error);
+        return;
+      }
+      dispatch(resortsFetched(data));
+    } catch (err) {
+      setLoading(false);
+    }
+  };
+
+  const deleteResort = async (id) => {
+    console.log('resort id is: ', id);
+    await axios({
+      url: `https://resorts-booking-api.herokuapp.com/resorts/${id}`,
+      method: 'DELETE',
+      headers: {
+        authorization: sessionStorage.getItem('JwtAccessToken'),
+      },
+    });
+    fetchResorts();
+  };
+
   useEffect(() => {
     if (resorts.length === 0) fetchResorts();
   }, [resorts]);
