@@ -55,7 +55,7 @@ const Nav = () => {
             </Link>
           </li>
           <li className="nav-list">
-            <Link className="nav-link link-style" to="/myreseravtions">
+            <Link className="nav-link link-style" to="/reservations">
               My reservations
             </Link>
           </li>
@@ -65,7 +65,7 @@ const Nav = () => {
             </Link>
           </li>
           <li className="nav-list">
-            <Link className="nav-link link-style" to="/deleteItem">
+            <Link className="nav-link link-style" to="/deleteResorts">
               Delete resort
             </Link>
           </li>

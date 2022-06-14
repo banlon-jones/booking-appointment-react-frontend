@@ -14,7 +14,6 @@
 - React-BootStrap
 
 ## Live Demo
-
 [View live](https://resorts-booking.netlify.app/)
 
 ## Getting Started
@@ -23,13 +22,13 @@ To run this application please follow these steps:
 
 - Install Node.js ^14.0
 - clone the repository by running\
-   `git clone https://github.com/banlon-jones/booking-appointment-react-frontend`
+    `git clone https://github.com/banlon-jones/booking-appointment-react-frontend`
 - navigate to the folder\
-   `cd booking-appointment-react-frontend`
+    `cd booking-appointment-react-frontend`
 - Install packages\
-   `npm install`
+    `npm install`
 - run the application\
-   `npm start`
+    `npm start`
 
 ## Authors
 
@@ -81,3 +80,4 @@ Give a ⭐️ if you like this project!
 ## 📝 License
 
 This project is [MIT](./MIT.md) licensed.
+
