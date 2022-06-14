@@ -59,7 +59,6 @@ const ResortDetails = () => {
               </div>
             </form>
           </Modal.Body>
-
         </Modal>
       </div>
     </div>
