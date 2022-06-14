@@ -1,10 +1,9 @@
-import { Axios as axios } from 'axios';
+import axios from 'axios';
 
-// eslint-disable-next-line no-unused-vars
-const create = (reservationPayload) => {
-  const url = 'http://127.0.0.1:3000/reservation';
+export const create = async (reservationPayload) => {
+  const url = 'https://resorts-booking-api.herokuapp.com/reservations';
   try {
-    const { data } = axios.post(
+    const { data } = await axios.post(
       url,
       reservationPayload,
       {
@@ -20,6 +19,20 @@ const create = (reservationPayload) => {
   }
 };
 
-const getReservation = () => {
-  const url = ''
-}
+export const fetchReservation = async () => {
+  const url = 'https://resorts-booking-api.herokuapp.com/reservations';
+  try {
+    const { data } = await axios.get(
+      url,
+      {
+        headers: {
+          authorization: sessionStorage.getItem('JwtAccessToken'),
+        },
+      },
+    );
+    return data;
+  } catch (e) {
+    console.log(e);
+    return null;
+  }
+};
