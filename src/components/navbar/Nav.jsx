@@ -1,14 +1,17 @@
 import React, { useState } from 'react';
+import { useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
 import logo from '../logo.jpg';
 import './Nav.css';
 
 const Nav = () => {
   const [isMobile, setIsMobile] = useState(false);
+  const { loggedIn } = useSelector((state) => state.user)
 
   return (
     <div className="navigation-panel">
-      <header>
+      {!loggedIn && (
+        <header>
         <div
           className={
             isMobile
@@ -42,7 +45,9 @@ const Nav = () => {
           </div>
         </div>
       </header>
-      <nav>
+      )}
+      {loggedIn && (
+        <nav>
         <ul className={isMobile ? 'show-mobile-menu' : 'hide-mobile-menu'}>
           <li className="nav-list">
             <Link className="nav-link link-style" to="/resorts">
@@ -71,6 +76,7 @@ const Nav = () => {
           </li>
         </ul>
       </nav>
+      )}
       <footer className={isMobile ? 'show-mobile-menu' : 'hide-mobile-menu'}>
         <ul className="footer-ul ul-style">
           <li className="social-media-list">
