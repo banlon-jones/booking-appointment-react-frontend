@@ -1,5 +1,4 @@
 import React from 'react';
-import './reservation.css';
 
 const Reservation = (Prop) => {
   const { reservation } = Prop;
