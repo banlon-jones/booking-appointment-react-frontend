@@ -39,7 +39,6 @@ ul {
   top: 0;
   left: 0;
   width: 100vw;
-  height: 100vh;
   padding: 0;
   border: 1px solid #cacac8;
 }
@@ -52,6 +51,8 @@ ul {
 
 .nav-mobile-border {
   border-bottom: 1px solid #cacac8;
+  background-color: #fff;
+  z-index: 1;
 }
 
 .nav-btn-holder {
@@ -72,7 +73,7 @@ ul {
 
 .button-sign-logout {
   padding: 0.3rem;
-  margin-left: 12rem;
+  margin-left: 1rem;
   border: 1px solid #97bf11;
   border-radius: 4px;
   font-size: 12px;

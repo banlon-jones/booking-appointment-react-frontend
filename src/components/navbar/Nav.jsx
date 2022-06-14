@@ -1,17 +1,17 @@
 import React, { useState } from 'react';
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { logOutUser } from '../../store/user/user';
 import logo from '../logo.jpg';
 import './Nav.css';
 
 const Nav = () => {
+  const dispatch = useDispatch();
   const [isMobile, setIsMobile] = useState(false);
   const { loggedIn } = useSelector((state) => state.user)
 
   return (
     <div className="navigation-panel">
-      {!loggedIn && (
         <header>
         <div
           className={
@@ -22,7 +22,8 @@ const Nav = () => {
         >
           <img src={logo} alt="Logo" className="logo" />
           <div className="nav-btn-holder">
-            <Link to="/login">
+            {!loggedIn && (
+             <> <Link to="/login">
               <button className="button-sign-log" type="submit">
                 Log in
               </button>
@@ -31,8 +32,10 @@ const Nav = () => {
               <button className="button-sign-log" type="submit">
                 Sign up
               </button>
-            </Link>
-            <button
+            </Link> </>
+            )}
+            {loggedIn && (
+              <button
               className="button-icon"
               type="submit"
               onClick={() => setIsMobile(!isMobile)}
@@ -43,17 +46,12 @@ const Nav = () => {
                 <i className="fas fa-bars fa-2x" />
               )}
             </button>
+            )}
           </div>
         </div>
       </header>
-      )}
       {loggedIn && (
         <nav>
-          {logOutUser && (
-            <button className="button-sign-logout" type="submit">
-              Log out
-            </button>
-         )}
         <ul className={isMobile ? 'show-mobile-menu' : 'hide-mobile-menu'}>
           <li className="nav-list">
             <Link className="nav-link link-style" to="/resorts">
@@ -79,6 +77,14 @@ const Nav = () => {
             <Link className="nav-link link-style" to="/deleteItem">
               Delete resort
             </Link>
+          </li>
+          <li>
+            <button 
+              className="button-sign-logout" type="button" 
+              onClick={() => dispatch(logOutUser())}
+            >
+              Log out
+            </button>
           </li>
         </ul>
       </nav>
