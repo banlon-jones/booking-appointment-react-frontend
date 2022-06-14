@@ -16,7 +16,7 @@ const setRole = createAsyncThunk('setRole', async () => {
       );
       return data.role;
     } catch (e) {
-      console.log(e);
+      return '';
     }
   }
   return '';
