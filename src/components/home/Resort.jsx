@@ -12,7 +12,6 @@ const Resort = (props) => {
     <Link to={detailsUrl}>
       <Image roundedCircle src={resort.image} alt={resort.name} />
       <h2 className={classes.resort_name}>{resort.name}</h2>
-      <p className={classes.resort_description}>{resort.description}</p>
     </Link>
   );
 };

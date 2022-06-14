@@ -16,7 +16,7 @@ const Resorts = () => {
   const [loading, setLoading] = useState(false);
   const [currentPage, setCurrentPage] = useState(0);
   const [currentItems, setCurrentItems] = useState([]);
-  const [pageSize, setPageSize] = useState(2);
+  const [pageSize, setPageSize] = useState(3);
 
   const baseIndex = () => currentPage * pageSize;
 
@@ -56,7 +56,7 @@ const Resorts = () => {
     if (resorts) {
       setLoading(false);
     }
-    setPageSize(2);
+    setPageSize(3);
   }, []);
 
   useEffect(() => {

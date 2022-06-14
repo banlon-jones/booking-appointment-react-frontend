@@ -11,7 +11,7 @@ img {
   align-items: center;
   justify-content: center;
   align-self: flex-start;
-  margin-top: 5%;
+  margin-top: 10%;
   border: none;
   background-color: #98bf13;
   color: #fff;
@@ -55,6 +55,7 @@ img {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding-top: 2.5rem;
 }
 
 .current_resorts_list {
