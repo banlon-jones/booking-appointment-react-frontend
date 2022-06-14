@@ -1,0 +1,82 @@
+img {
+  width: 25rem;
+  height: 25rem;
+}
+
+.prev,
+.next,
+.prev_disabled,
+.next_disabled {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-self: flex-start;
+  margin-top: 5%;
+  border: none;
+  background-color: #98bf13;
+  color: #fff;
+  font-size: 3rem;
+  padding: 2rem;
+}
+
+.prev,
+.prev_disabled {
+  border-radius: 0 50% 50% 0;
+}
+
+.next,
+.next_disabled {
+  border-radius: 50% 0 0 50%;
+}
+
+.prev_disabled,
+.next_disabled  {
+  background-color: rgb(206, 206, 206);
+}
+
+.prev polyline,
+.next polyline,
+.prev_disabled polyline,
+.next_disabled polyline {
+  font-size: 2em;
+  stroke: #fff;
+}
+
+.resorts_container {
+  width: 85%;
+  float: right;
+}
+
+.resorts_header {
+  text-align: center;
+}
+
+.current_resorts_container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.current_resorts_list {
+  display: flex;
+  justify-content: space-around;
+  align-items: stretch;
+  gap: 2rem;
+  list-style: none;
+  padding: 2rem;
+  margin: 0;
+  width: 100%;
+}
+
+.current_resorts_list li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: stretch;
+  flex: 1;
+  padding: 1rem;
+}
+
+.resort_details {
+  text-align: right;
+}
