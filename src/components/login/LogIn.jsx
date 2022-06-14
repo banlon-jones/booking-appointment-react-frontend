@@ -31,7 +31,7 @@ const LogIn = () => {
     try {
       setLoading(true);
       const { data } = await axios({
-        url: 'http://127.0.0.1:3000/auth/login',
+        url: 'https://resorts-booking-api.herokuapp.com/auth/login',
         method: 'POST',
         data: {
           email,
