@@ -1,7 +1,40 @@
-import React from 'react';
+import React, { useEffect } from 'react';
+import axios from 'axios';
+import { useDispatch, useSelector } from 'react-redux';
+import { useForm } from 'react-hook-form';
+import { resortsFetched } from '../store/resorts/resortsSlice';
+import { createReservation } from '../store/reservation/reservation';
 
 const CreateReservation = () => {
-  console.log('hello');
+  const { register, handleSubmit } = useForm();
+  const resorts = useSelector((state) => state.resorts);
+  const dispatch = useDispatch();
+
+  const onSubmit = (data) => {
+    console.log(data);
+    dispatch(createReservation(data));
+  };
+  const fetchResorts = async () => {
+    try {
+      const { data } = await axios({
+        url: 'https://resorts-booking-api.herokuapp.com/resorts',
+        method: 'GET',
+        headers: {
+          authorization: sessionStorage.getItem('JwtAccessToken'),
+        },
+      });
+      if (data.error) {
+        return;
+      }
+      dispatch(resortsFetched(data));
+    } catch (err) {
+      console.log(err);
+    }
+  };
+  useEffect(() => {
+    fetchResorts();
+  }, []);
+
   return (
     <div>
       <div className="container">
@@ -20,26 +53,39 @@ const CreateReservation = () => {
             <div className="card-body">
               <h2> Make a reservation </h2>
               <div>
-                <form action="#">
+                <form onSubmit={handleSubmit(onSubmit)}>
                   <div className="row">
                     <div className="col-md-4">
                       <p> Select resort </p>
-                      <select name="hi" id="sdf" className="form-control-lg form-control">
-                        <option value="0"> Nobe </option>
-                        <option value="0"> Nobe </option>
-                        <option value="0"> Nobe </option>
-                        <option value="0"> Nobe </option>
-                        <option value="0"> Nobe </option>
+                      {/* eslint-disable-next-line react/jsx-props-no-spreading */}
+                      <select {...register('resort_id')} id="sdf" className="form-control-lg form-control">
+                        <option> Select a resort </option>
+                        {
+                          resorts.map((item) => (
+                            <option key={item.id} value={item.id} name={item.name}>
+                              {item.name}
+                              {' '}
+                            </option>
+                          ))
+                        }
                       </select>
                     </div>
                     <div className="col-md-4">
                       <p> From </p>
-                      <input type="date" id="from" className="form-control" />
+                      {/* eslint-disable-next-line react/jsx-props-no-spreading */}
+                      <input type="date" id="from" className="form-control" {...register('date_from')} />
                     </div>
                     <div className="col-md-4">
-                      <p> to </p>
-                      <input type="date" className="form-control" />
+                      <p> To </p>
+                      {/* eslint-disable-next-line react/jsx-props-no-spreading */}
+                      <input type="date" className="form-control" {...register('date_to')} />
                     </div>
+                  </div>
+                  <div className="m-3">
+                    <button type="submit" className="btn btn-success">
+                      {' '}
+                      submit
+                    </button>
                   </div>
                 </form>
               </div>

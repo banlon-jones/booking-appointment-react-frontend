@@ -6,6 +6,7 @@ import LogIn from '../login/LogIn';
 import SignUp from '../signup/SignUp';
 import Reservations from '../reservations/Reservations';
 import CreateReservation from '../../createReservation/CreateReversation';
+import ResortsToDelete from '../home/ResortsToDelete';
 
 const Views = () => (
   <Routes>
