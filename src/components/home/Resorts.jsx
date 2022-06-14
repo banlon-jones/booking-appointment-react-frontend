@@ -14,6 +14,22 @@ const Resorts = () => {
 
   const [errorMessage, setErrorMessage] = useState('');
   const [loading, setLoading] = useState(false);
+  const [currentPage, setCurrentPage] = useState(0);
+  const [currentItems, setCurrentItems] = useState([]);
+  const [pageSize, setPageSize] = useState(2);
+
+  const baseIndex = () => currentPage * pageSize;
+
+  const prevClickHandler = () => {
+    if (currentPage > 0) setCurrentPage((currentPage) => currentPage - 1);
+    else setCurrentPage(0);
+  };
+
+  const nextClickHandler = () => {
+    if (currentPage < Math.ceil(resorts.length / pageSize) - 1) {
+      setCurrentPage((currentPage) => currentPage + 1);
+    }
+  };
 
   const fetchResorts = async () => {
     try {
