@@ -7,7 +7,6 @@ const App = () => (
   <div>
     <Nav />
     <div className="main-content">
-    <div>
       <Views />
     </div>
   </div>
