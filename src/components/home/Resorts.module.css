@@ -1,0 +1,134 @@
+img {
+  width: 25rem;
+  height: 25rem;
+}
+
+.prev,
+.next,
+.prev_disabled,
+.next_disabled {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-self: flex-start;
+  margin-top: 10%;
+  border: none;
+  background-color: #98bf13;
+  color: #fff;
+  font-size: 3rem;
+  padding: 2rem;
+}
+
+.prev,
+.prev_disabled {
+  border-radius: 0 50% 50% 0;
+}
+
+.next,
+.next_disabled {
+  border-radius: 50% 0 0 50%;
+}
+
+.prev_disabled,
+.next_disabled {
+  background-color: rgb(206, 206, 206);
+}
+
+.prev polyline,
+.next polyline,
+.prev_disabled polyline,
+.next_disabled polyline {
+  font-size: 2em;
+  stroke: #fff;
+}
+
+.resorts_container {
+  width: 85%;
+  float: right;
+}
+
+.resorts_header {
+  text-align: center;
+}
+
+.current_resorts_container,
+.resorts_to_delete_container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 2.5rem;
+}
+
+.current_resorts_list {
+  display: flex;
+  justify-content: space-around;
+  align-items: stretch;
+  gap: 2rem;
+  list-style: none;
+  padding: 2rem;
+  margin: 0;
+  width: 100%;
+}
+
+.resorts_to_delete_container {
+  justify-content: flex-start;
+  flex-direction: column;
+  gap: 2.5rem;
+  width: 85%;
+  float: right;
+}
+
+.resorts_to_delete_container li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1em;
+  gap: 2.5rem;
+  font-size: 1.5em;
+  border-bottom: 1px dashed lightblue;
+  width: 100%;
+}
+
+.current_resorts_list li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: stretch;
+  flex: 1;
+  padding: 1rem;
+}
+
+.current_resorts_list li:hover {
+  outline: 1px solid lightblue;
+}
+
+.current_resorts_list li a {
+  text-decoration: none;
+  cursor: pointer;
+  text-align: center;
+}
+
+.current_resorts_list li .resort_name {
+  color: rgb(85, 84, 84);
+  text-transform: uppercase;
+  font-size: 2em;
+  font-weight: 700;
+  margin-top: 1.2em;
+}
+
+.current_resorts_list li .resort_description {
+  color: rgb(32, 32, 32);
+  font-size: 1.2em;
+  margin-top: 1.2em;
+}
+
+.resort_details {
+  text-align: right;
+}
+
+.resorts_to_delete_container .btn_delete_resort {
+  background-color: red;
+  color: #fff;
+  border: none;
+  padding: 0.5em;
+}
