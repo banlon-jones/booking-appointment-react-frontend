@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ResortsToDelete snapshots matches ResortsToDelete snapshot 1`] = `
+<div>
+  <ul
+    className="resorts_to_delete_container"
+  >
+    <h2
+      className="text-center w-100"
+    >
+      All Resorts
+    </h2>
+  </ul>
+</div>
+`;
