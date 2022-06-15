@@ -1,6 +1,24 @@
 /* eslint-disable no-param-reassign */
+/* eslint-disable no-use-before-define */
+/* eslint-disable no-undef */
 
-const setNewResort = (data) => async () => {
+import { createSlice } from '@reduxjs/toolkit';
+
+const initialState = {
+  message: ' ',
+};
+
+const newResortSlice = createSlice({
+  name: 'newResort',
+  initialState,
+  reducers: {
+    setMessage: (state, action) => {
+      state.message = action.payload;
+    },
+  },
+});
+
+export const setNewResort = (data) => async (dispatch) => {
   try {
     const response = await fetch('http://localhost:3001/resorts', {
       method: 'POST',
@@ -12,10 +30,11 @@ const setNewResort = (data) => async () => {
       body: JSON.stringify(data),
     });
     const res = await response.json();
-    console.log(res);
+    dispatch(setMessage(res.message));
   } catch (error) {
-    console.log('Error in add', error);
+    dispatch(setMessage('Could not add resort'));
   }
 };
 
-export default setNewResort;
+export const { setMessage } = newResortSlice.actions;
+export default newResortSlice.reducer;
