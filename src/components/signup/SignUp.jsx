@@ -79,7 +79,7 @@ const SignUp = () => {
             />
           </Form.Group>
           <Form.Group className="mb-3" controlId="formBasicEmail">
-            <Form.Label>Email address</Form.Label>
+            <Form.Label>Email Address</Form.Label>
             <span>*</span>
             <Form.Control
               type="email"

@@ -1,9 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`snapshots matches LogIn snapshot 1`] = `
+exports[`snapshots matches SignUp snapshot 1`] = `
 <div
-  className="login_container"
-  data-testid="login-cont"
+  className="register_container"
 >
   <div
     className="form_container container"
@@ -11,7 +10,7 @@ exports[`snapshots matches LogIn snapshot 1`] = `
     <h3
       className="form_title"
     >
-      Log In
+      Sign Up
     </h3>
     <span
       className="error_message"
@@ -25,9 +24,30 @@ exports[`snapshots matches LogIn snapshot 1`] = `
       >
         <label
           className="form-label"
+          htmlFor="formBasicName"
+        >
+          Name
+        </label>
+        <span>
+          *
+        </span>
+        <input
+          className="form-control"
+          id="formBasicName"
+          onChange={[Function]}
+          placeholder="Enter Your Name"
+          required={true}
+          type="text"
+        />
+      </div>
+      <div
+        className="mb-3"
+      >
+        <label
+          className="form-label"
           htmlFor="formBasicEmail"
         >
-          Email address
+          Email Address
         </label>
         <span>
           *
@@ -62,12 +82,34 @@ exports[`snapshots matches LogIn snapshot 1`] = `
           type="password"
         />
       </div>
+      <div
+        className="mb-3"
+      >
+        <label
+          className="form-label"
+          htmlFor="formBasicPasswordConfirmation"
+        >
+          Password Confirmation
+        </label>
+        <span>
+          *
+        </span>
+        <input
+          className="form-control"
+          id="formBasicPasswordConfirmation"
+          onChange={[Function]}
+          placeholder="Password Confirmation"
+          required={true}
+          type="password"
+        />
+      </div>
       <button
         className="submit_btn btn btn-primary"
         disabled={false}
+        id="sign-up-btn"
         type="submit"
       >
-        Log In
+        Sign Up
       </button>
     </form>
   </div>
