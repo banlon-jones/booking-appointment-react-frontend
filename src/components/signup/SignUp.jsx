@@ -38,7 +38,7 @@ const SignUp = () => {
     setLoading(true);
     try {
       const { data } = await axios({
-        url: 'http://127.0.0.1:3000/auth/register',
+        url: 'https://resorts-booking-api.herokuapp.com/auth/register',
         method: 'POST',
         data: {
           name,
@@ -54,8 +54,8 @@ const SignUp = () => {
       }
       setSuccessfullSignUp(true);
       setInterval(() => {
-        navigate('/');
-      }, 2000);
+        navigate('/login');
+      }, 1500);
     } catch (err) {
       setLoading(false);
       setErrorMessage(err.message);
