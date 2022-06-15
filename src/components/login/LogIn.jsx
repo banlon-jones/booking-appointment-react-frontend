@@ -62,7 +62,7 @@ const LogIn = () => {
   };
 
   return (
-    <div className={classes.login_container}>
+    <div className={classes.login_container} data-testid="login-cont">
       <Container className={classes.form_container}>
         <h3 className={classes.form_title}>Log In</h3>
         <span className={classes.error_message}>{errorMessage}</span>
