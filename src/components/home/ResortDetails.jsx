@@ -7,7 +7,7 @@ import { useDispatch } from 'react-redux';
 import { createReservation } from '../../store/reservation/reservation';
 
 const ResortDetails = () => {
-  const { register, handleSubmit } = useForm();
+  const { register, handleSubmit, formState: { errors } } = useForm();
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const [show, setShow] = useState(false);
@@ -43,12 +43,14 @@ const ResortDetails = () => {
                 <div className="col-12">
                   <p> From </p>
                   {/* eslint-disable-next-line react/jsx-props-no-spreading */}
-                  <input type="date" id="from" className="form-control" {...register('date_from')} />
+                  <input type="date" id="from" className="form-control" {...register('date_from', { required: true })} />
+                  {errors.date_from && <span>This date is required</span>}
                 </div>
                 <div className="col-12">
                   <p> To </p>
                   {/* eslint-disable-next-line react/jsx-props-no-spreading */}
-                  <input type="date" className="form-control" {...register('date_to')} />
+                  <input type="date" className="form-control" {...register('date_to', { required: true })} />
+                  {errors.date_to && <span>This date is required</span>}
                 </div>
               </div>
               <div className="m-3">
