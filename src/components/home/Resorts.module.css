@@ -1,6 +1,6 @@
 img {
-  width: 25rem;
-  height: 25rem;
+  width: 10rem;
+  height: 10rem;
 }
 
 .prev,
@@ -10,13 +10,12 @@ img {
   display: flex;
   align-items: center;
   justify-content: center;
-  align-self: flex-start;
-  margin-top: 10%;
+  align-self: center;
   border: none;
   background-color: #98bf13;
   color: #fff;
-  font-size: 3rem;
-  padding: 2rem;
+  font-size: 1.5rem;
+  padding: 1rem;
 }
 
 .prev,
@@ -43,8 +42,8 @@ img {
 }
 
 .resorts_container {
-  width: 85%;
-  float: right;
+  width: 100%;
+  padding-top: 8em;
 }
 
 .resorts_header {
@@ -57,35 +56,37 @@ img {
   justify-content: space-between;
   align-items: center;
   padding-top: 2.5rem;
+  width: 100%;
 }
 
 .current_resorts_list {
   display: flex;
+  flex-direction: column;
   justify-content: space-around;
-  align-items: stretch;
-  gap: 2rem;
+  align-items: center;
   list-style: none;
-  padding: 2rem;
   margin: 0;
+  padding: 0;
   width: 100%;
 }
 
 .resorts_to_delete_container {
   justify-content: flex-start;
+  align-items: flex-start;
   flex-direction: column;
-  gap: 2.5rem;
-  width: 85%;
-  float: right;
+  padding: 0;
+  padding-top: 8em;
+  width: 100%;
 }
 
 .resorts_to_delete_container li {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 1em;
-  gap: 2.5rem;
+  padding: 0.5em;
+  margin: 0;
   font-size: 1.5em;
-  border-bottom: 1px dashed lightblue;
+  border-bottom: 1px solid lightblue;
   width: 100%;
 }
 
@@ -94,7 +95,6 @@ img {
   flex-direction: column;
   align-items: center;
   justify-content: stretch;
-  flex: 1;
   padding: 1rem;
 }
 
@@ -111,14 +111,8 @@ img {
 .current_resorts_list li .resort_name {
   color: rgb(85, 84, 84);
   text-transform: uppercase;
-  font-size: 2em;
+  font-size: 1.3em;
   font-weight: 700;
-  margin-top: 1.2em;
-}
-
-.current_resorts_list li .resort_description {
-  color: rgb(32, 32, 32);
-  font-size: 1.2em;
   margin-top: 1.2em;
 }
 
@@ -131,4 +125,105 @@ img {
   color: #fff;
   border: none;
   padding: 0.5em;
+}
+
+@media only screen and (min-width: 480px) {
+  .prev,
+  .next,
+  .prev_disabled,
+  .next_disabled {
+    font-size: 2.5rem;
+  }
+
+  img {
+    width: 15rem;
+    height: 15rem;
+  }
+
+  .resorts_container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .resorts_header {
+    text-align: center;
+  }
+
+  .current_resorts_container {
+    display: flex;
+    justify-content: center;
+    gap: 0;
+    align-items: center;
+    padding-top: 2.5rem;
+  }
+
+  .resorts_to_delete_container {
+    align-items: center;
+  }
+
+  .current_resorts_list {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    list-style: none;
+    padding: 0;
+    width: 100%;
+  }
+
+  .current_resorts_list li .resort_name {
+    font-size: 1.5em;
+    padding-bottom: 2em;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  img {
+    width: 20rem;
+    height: 20rem;
+  }
+
+  .resorts_container {
+    width: 100%;
+  }
+
+  .current_resorts_list {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: stretch;
+    list-style: none;
+    margin: 0;
+    width: 100%;
+  }
+
+  .resorts_to_delete_container {
+    width: 100%;
+    height: 100vh;
+    padding-top: 2em;
+    padding-right: 2em;
+  }
+}
+
+@media only screen and (min-width: 1150px) {
+  img {
+    width: 15rem;
+    height: 15rem;
+  }
+
+  .resorts_container {
+    width: 100%;
+    height: 100vh;
+    align-items: stretch;
+    padding: 0;
+  }
+
+  .current_resorts_list {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    list-style: none;
+    margin: 0;
+    width: 100%;
+  }
 }
