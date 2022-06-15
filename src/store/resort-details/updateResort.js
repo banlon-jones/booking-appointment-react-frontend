@@ -1,6 +1,23 @@
+/* eslint-disable no-undef */
+/* eslint-disable no-use-before-define */
 /* eslint-disable no-param-reassign */
+import { createSlice } from '@reduxjs/toolkit';
 
-const setUpdateResort = (data, id) => async () => {
+const initialState = {
+  message: ' ',
+};
+
+const updateResortSlice = createSlice({
+  name: 'updateResort',
+  initialState,
+  reducers: {
+    setMessage: (state, action) => {
+      state.message = action.payload;
+    },
+  },
+});
+
+export const setUpdateResort = (data, id) => async (dispatch) => {
   const url = `http://localhost:3001/resorts/${id}`;
   try {
     const response = await fetch(url, {
@@ -13,10 +30,11 @@ const setUpdateResort = (data, id) => async () => {
       body: JSON.stringify(data),
     });
     const res = await response.json();
-    console.log(res);
+    dispatch(setMessage(res.message));
   } catch (error) {
-    console.log('Error in add', error);
+    dispatch(setMessage('Could not update resort'));
   }
 };
 
-export default setUpdateResort;
+export const { setMessage } = updateResortSlice.actions;
+export default updateResortSlice.reducer;
