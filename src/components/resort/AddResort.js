@@ -39,7 +39,7 @@ function resortAdd() {
   };
 
   return (
-    <div className={AddResort.add_resort_container}>
+    <div className={AddResort.add_resort_container} data-testid="Add-resort">
       <Notification showNotice={showNotice} message={message} />
       <h1>Add Resort</h1>
       <Form addResort={addResort} formId="add" />
