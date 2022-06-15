@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Resorts snapshots matches Resort snapshot 1`] = `
+<a
+  href="/resorts/1"
+  onClick={[Function]}
+>
+  <img
+    alt="Resort Name"
+    className="rounded-circle"
+    src="image_url"
+  />
+  <h2
+    className="resort_name"
+  >
+    Resort Name
+  </h2>
+</a>
+`;
