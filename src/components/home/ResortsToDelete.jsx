@@ -52,7 +52,7 @@ const ResortsToDelete = () => {
   return (
     <div>
       <ul className={classes.resorts_to_delete_container}>
-        <h2>All Resorts</h2>
+        <h2 className="text-center w-100">All Resorts</h2>
         {resorts.map((resort) => (
           <li key={resort.id} className={classes.resort_to_delete}>
             {resort.name}
