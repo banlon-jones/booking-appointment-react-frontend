@@ -1,0 +1,117 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`snapshots matches SignUp snapshot 1`] = `
+<div
+  className="register_container"
+>
+  <div
+    className="form_container container"
+  >
+    <h3
+      className="form_title"
+    >
+      Sign Up
+    </h3>
+    <span
+      className="error_message"
+    />
+    <form
+      className=""
+      onSubmit={[Function]}
+    >
+      <div
+        className="mb-3"
+      >
+        <label
+          className="form-label"
+          htmlFor="formBasicName"
+        >
+          Name
+        </label>
+        <span>
+          *
+        </span>
+        <input
+          className="form-control"
+          id="formBasicName"
+          onChange={[Function]}
+          placeholder="Enter Your Name"
+          required={true}
+          type="text"
+        />
+      </div>
+      <div
+        className="mb-3"
+      >
+        <label
+          className="form-label"
+          htmlFor="formBasicEmail"
+        >
+          Email Address
+        </label>
+        <span>
+          *
+        </span>
+        <input
+          className="form-control"
+          id="formBasicEmail"
+          onChange={[Function]}
+          placeholder="Enter email"
+          required={true}
+          type="email"
+        />
+      </div>
+      <div
+        className="mb-3"
+      >
+        <label
+          className="form-label"
+          htmlFor="formBasicPassword"
+        >
+          Password
+        </label>
+        <span>
+          *
+        </span>
+        <input
+          className="form-control"
+          id="formBasicPassword"
+          onChange={[Function]}
+          placeholder="Password"
+          required={true}
+          type="password"
+        />
+      </div>
+      <div
+        className="mb-3"
+      >
+        <label
+          className="form-label"
+          htmlFor="formBasicPasswordConfirmation"
+        >
+          Password Confirmation
+        </label>
+        <span>
+          *
+        </span>
+        <input
+          className="form-control"
+          id="formBasicPasswordConfirmation"
+          onChange={[Function]}
+          placeholder="Password Confirmation"
+          required={true}
+          type="password"
+        />
+      </div>
+      <button
+        className="submit_btn btn btn-primary"
+        disabled={false}
+        id="sign-up-btn"
+        type="submit"
+      >
+        Sign Up
+      </button>
+    </form>
+  </div>
+</div>
+`;

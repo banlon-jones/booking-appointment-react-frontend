@@ -62,13 +62,13 @@ const LogIn = () => {
   };
 
   return (
-    <div className={classes.login_container}>
+    <div className={classes.login_container} data-testid="login-cont">
       <Container className={classes.form_container}>
         <h3 className={classes.form_title}>Log In</h3>
         <span className={classes.error_message}>{errorMessage}</span>
         <Form onSubmit={(e) => loginUser(e)}>
           <Form.Group className="mb-3" controlId="formBasicEmail">
-            <Form.Label>Email address</Form.Label>
+            <Form.Label>Email Address</Form.Label>
             <span>*</span>
             <Form.Control
               type="email"
