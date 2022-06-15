@@ -5,6 +5,8 @@ import userSlice from './user/user';
 import resortDetailSlice from './resort-details/resortDetail';
 import newResortSlice from './resort-details/newResort';
 import updateResortSlice from './resort-details/updateResort';
+import resortsSlice from './resorts/resortsSlice';
+import reservationSlice from './reservation/reservation';
 
 const store = configureStore({
   reducer: {
@@ -12,6 +14,8 @@ const store = configureStore({
     resortDetail: resortDetailSlice,
     newResort: newResortSlice,
     updateResort: updateResortSlice,
+    resorts: resortsSlice,
+    reservations: reservationSlice,
   },
 });
 

@@ -18,7 +18,7 @@ const updateResortSlice = createSlice({
 });
 
 export const setUpdateResort = (data, id) => async (dispatch) => {
-  const url = `http://localhost:3001/resorts/${id}`;
+  const url = `https://resorts-booking-api.herokuapp.com/resorts/${id}`;
   try {
     const response = await fetch(url, {
       method: 'PATCH',

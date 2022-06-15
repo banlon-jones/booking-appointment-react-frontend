@@ -1,3 +1,4 @@
+/* eslint-disable comma-dangle */
 /* eslint-disable no-param-reassign */
 /* eslint-disable no-use-before-define */
 /* eslint-disable no-undef */
@@ -20,15 +21,18 @@ const newResortSlice = createSlice({
 
 export const setNewResort = (data) => async (dispatch) => {
   try {
-    const response = await fetch('http://localhost:3001/resorts', {
-      method: 'POST',
-      mode: 'cors',
-      headers: {
-        Authorization: sessionStorage.getItem('JwtAccessToken'),
-        'Content-Type': 'application/json',
-      },
-      body: JSON.stringify(data),
-    });
+    const response = await fetch(
+      'https://resorts-booking-api.herokuapp.com/resorts',
+      {
+        method: 'POST',
+        mode: 'cors',
+        headers: {
+          Authorization: sessionStorage.getItem('JwtAccessToken'),
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(data),
+      }
+    );
     const res = await response.json();
     dispatch(setMessage(res.message));
   } catch (error) {

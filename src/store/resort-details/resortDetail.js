@@ -21,7 +21,7 @@ const resortDetailSlice = createSlice({
 });
 
 export const getResort = (id) => async (dispatch) => {
-  const url = `http://localhost:3001/resorts/${id}`;
+  const url = `https://resorts-booking-api.herokuapp.com/resorts/${id}`;
   try {
     const response = await fetch(url);
     const data = await response.json();

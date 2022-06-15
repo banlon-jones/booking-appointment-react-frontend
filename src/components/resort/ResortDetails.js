@@ -6,11 +6,12 @@ import { useSelector, useDispatch } from 'react-redux';
 import { BsChevronRight } from 'react-icons/bs';
 import { useNavigate, useParams } from 'react-router-dom';
 import { setRole } from '../../store/user/user';
+import ReserveResort from './resort_components/ReserveResort';
 import {
   selectResort,
   getResort,
 } from '../../store/resort-details/resortDetail';
-import resortClass from './Resort.module.css';
+import resortClass from './ResortDetails.module.css';
 
 function Resort() {
   const navigate = useNavigate();
@@ -51,16 +52,10 @@ function Resort() {
             </li>
           </ul>
           <div className={resortClass.button_main_container}>
-            <button
-              type="button"
-              className={resortClass.button_container}
-              onClick={() => {
-                navigate(`/reserve/${resortDetails.id}`);
-              }}
-            >
+            <ReserveResort>
               Reserve
               <BsChevronRight className={resortClass.icon} />
-            </button>
+            </ReserveResort>
             <button
               type="button"
               className={resortClass.button_container}
