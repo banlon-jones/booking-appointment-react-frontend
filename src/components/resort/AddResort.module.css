@@ -21,10 +21,19 @@
 form {
   display: flex;
   flex-direction: column;
-  width: 35%;
+  width: 55%;
   gap: 20px;
   margin: 0 auto;
   margin-top: 18px;
+}
+
+form textarea {
+  height: 200px;
+  font-size: 1.5em;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  padding: 0 15px;
+  line-height: 1.8em;
 }
 
 form input {
@@ -33,7 +42,7 @@ form input {
   border-radius: 5px;
   border: 1px solid #ccc;
   padding: 0 10px;
-  font-size: 2em;
+  font-size: 1.5em;
 }
 
 form input:focus {
@@ -50,7 +59,7 @@ form input:focus {
   border-radius: 5px;
   border: none;
   padding: 0 10px;
-  font-size: 2em;
+  font-size: 1.5em;
 }
 
 .label {

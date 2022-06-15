@@ -1,13 +1,14 @@
 .resort_container {
   display: flex;
   padding-top: 50px;
-  gap: 40px;
-  width: 85%;
+  gap: 20px;
+  width: 100%;
+  height: 100%;
   margin: 0 auto;
 }
 
 .inner_container {
-  width: 80%;
+  width: 100%;
   margin: 0 auto;
   margin-top: 60px;
   margin-right: 10px;
@@ -30,6 +31,7 @@
   display: flex;
   flex-direction: column;
   gap: 20px;
+  width: calc(100%);
 }
 
 .resort_details_container li {
@@ -58,10 +60,11 @@
 
 .image_container {
   width: 60%;
+  height: 80%;
   margin: 30px auto;
 }
 
-img {
+.image_container img {
   width: 100%;
   height: 100%;
   object-fit: cover;

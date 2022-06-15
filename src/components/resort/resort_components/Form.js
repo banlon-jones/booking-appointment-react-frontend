@@ -46,6 +46,7 @@ const Form = (props) => {
             addResort(e);
           } else updateResortValue(e);
         }}
+        data-testid="form"
       >
         <input
           type="text"
@@ -65,12 +66,14 @@ const Form = (props) => {
           name="city"
           defaultValue={setRestoreValue('city')}
         />
-        <input
-          type="text"
-          placeholder="Description"
+        <textarea
+          placeholder="Resort description"
+          col="50"
+          row="50"
           name="description"
           defaultValue={setRestoreValue('description')}
         />
+
         <input
           type="text"
           placeholder="Cost"

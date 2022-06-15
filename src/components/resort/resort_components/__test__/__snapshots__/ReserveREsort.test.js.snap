@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Reserve Resort Snapshot renders correctly 1`] = `
+Array [
+  <button
+    className="button_container"
+    data-testid="reserve-button"
+    onClick={[Function]}
+    type="button"
+  >
+    Reserve
+  </button>,
+  <div />,
+]
+`;

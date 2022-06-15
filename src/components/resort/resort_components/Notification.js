@@ -13,6 +13,7 @@ function Notification(props) {
         style={{
           display: message && showNotice === true ? 'block' : 'none',
         }}
+        data-testid="notice"
       >
         {message && (
           <p
