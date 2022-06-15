@@ -1,8 +1,8 @@
 import { render, screen } from '@testing-library/react';
 import React from 'react';
 import { Provider } from 'react-redux';
-import CreateReservation from '../createReservation/CreateReversation';
-import store from '../store/store';
+import CreateReservation from '../CreateReversation';
+import store from '../../store/store';
 
 describe('create reservation component should render as expected', () => {
   it('should display BOOK A RESORT', () => {

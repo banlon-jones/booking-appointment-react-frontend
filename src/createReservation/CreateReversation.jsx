@@ -61,7 +61,7 @@ const CreateReservation = () => {
                       <p> Select resort </p>
                       {/* eslint-disable-next-line react/jsx-props-no-spreading */}
                       <select {...register('resort_id')} className="form-control-lg form-control">
-                        <option selected disabled> Select a resort </option>
+                        <option disabled> Select a resort </option>
                         {
                           resorts.map((item) => (
                             <option key={item.id} value={item.id} name={item.name}>

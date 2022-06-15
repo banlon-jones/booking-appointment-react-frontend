@@ -1,4 +1,4 @@
-import store from '../store/store';
+import store from '../../store';
 
 const axios = require('axios');
 const MockAdapter = require('axios-mock-adapter');
