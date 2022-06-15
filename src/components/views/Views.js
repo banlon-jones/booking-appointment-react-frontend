@@ -3,7 +3,7 @@ import { Routes, Route } from 'react-router-dom';
 import Resorts from '../home/Resorts';
 import LogIn from '../login/LogIn';
 import SignUp from '../signup/SignUp';
-import Resort from '../resort/Resort';
+import ResortDetails from '../resort/ResortDetails';
 import AddResort from '../resort/AddResort';
 import UpdateResort from '../resort/UpdateResort';
 
@@ -12,9 +12,9 @@ const Views = () => (
     <Route index element={<Resorts />} />
     <Route path="/sign-up" element={<SignUp />} />
     <Route path="/login" element={<LogIn />} />
+    <Route path="/resorts/:resortId" element={<ResortDetails />} />
     <Route path="/additem" element={<AddResort />} />
-    <Route path="/resorts/:id" element={<Resort />} />
-    <Route path="/resort-update/:id" element={<UpdateResort />} />
+    <Route path="/resorts/update/:updateId" element={<UpdateResort />} />
   </Routes>
 );
 

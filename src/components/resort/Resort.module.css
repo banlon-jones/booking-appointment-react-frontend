@@ -2,12 +2,15 @@
   display: flex;
   padding-top: 50px;
   gap: 40px;
+  width: 85%;
+  margin: 0 auto;
 }
 
 .inner_container {
   width: 80%;
   margin: 0 auto;
   margin-top: 60px;
+  margin-right: 10px;
   padding: 10px 15px;
   display: flex;
 }

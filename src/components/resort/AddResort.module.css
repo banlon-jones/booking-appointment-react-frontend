@@ -77,6 +77,50 @@ form input:focus {
   align-items: center;
 }
 
+.notice_container {
+  background-color: rgba(22, 172, 22, 0.6);
+  position: relative;
+  margin-bottom: 30px;
+  border-radius: 5px;
+  height: 40px;
+  width: 60%;
+  text-transform: capitalize;
+  animation: show_notice 0.5s ease-in-out;
+}
+
+.notice_container p {
+  font-size: 1.6em;
+}
+
+@keyframes show_notice {
+  0% {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.notification {
+  color: #fff;
+  font-size: 2em;
+  text-align: center;
+  margin-top: 5px;
+}
+
+.cancel_notification {
+  position: absolute;
+  top: -2px;
+  right: 15px;
+  font-size: 2em;
+  color: #fff;
+  background-color: transparent;
+  border: none;
+}
+
 /* For mobile */
 
 @media screen and (max-width: 768px) {
