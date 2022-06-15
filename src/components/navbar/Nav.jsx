@@ -9,6 +9,7 @@ const Nav = () => {
   const dispatch = useDispatch();
   const [isMobile, setIsMobile] = useState(false);
   const { loggedIn } = useSelector((state) => state.user);
+  const { role } = useSelector((state) => state.user);
 
   return (
     <div className="navigation-panel">
@@ -70,16 +71,20 @@ const Nav = () => {
                 My reservations
               </Link>
             </li>
-            <li className="nav-list">
-              <Link className="nav-link link-style" to="/addItem">
-                Add resort
-              </Link>
-            </li>
-            <li className="nav-list">
-              <Link className="nav-link link-style" to="/deleteResorts">
-                Delete resort
-              </Link>
-            </li>
+            {role && (
+              <>
+                <li className="nav-list">
+                  <Link className="nav-link link-style" to="/addItem">
+                    Add resort
+                  </Link>
+                </li>
+                <li className="nav-list">
+                  <Link className="nav-link link-style" to="/deleteResorts">
+                    Delete resort
+                  </Link>
+                </li>
+              </>
+            )}
             <li>
               <button
                 className="button-sign-logout"
