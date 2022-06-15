@@ -6,7 +6,9 @@ import { resortsFetched } from '../store/resorts/resortsSlice';
 import { createReservation } from '../store/reservation/reservation';
 
 const CreateReservation = () => {
-  const { register, handleSubmit } = useForm();
+  const {
+    register, handleSubmit, formState: { errors },
+  } = useForm();
   const resorts = useSelector((state) => state.resorts);
   const dispatch = useDispatch();
 
@@ -58,8 +60,8 @@ const CreateReservation = () => {
                     <div className="col-md-4">
                       <p> Select resort </p>
                       {/* eslint-disable-next-line react/jsx-props-no-spreading */}
-                      <select {...register('resort_id')} id="sdf" className="form-control-lg form-control">
-                        <option> Select a resort </option>
+                      <select {...register('resort_id')} className="form-control-lg form-control">
+                        <option disabled> Select a resort </option>
                         {
                           resorts.map((item) => (
                             <option key={item.id} value={item.id} name={item.name}>
@@ -69,16 +71,19 @@ const CreateReservation = () => {
                           ))
                         }
                       </select>
+                      {errors.resort_id && <span>resort is required</span>}
                     </div>
                     <div className="col-md-4">
                       <p> From </p>
                       {/* eslint-disable-next-line react/jsx-props-no-spreading */}
-                      <input type="date" id="from" className="form-control" {...register('date_from')} />
+                      <input type="date" id="from" className="form-control" {...register('date_from', { required: true })} />
+                      {errors.date_from && <span>This date is required</span>}
                     </div>
                     <div className="col-md-4">
                       <p> To </p>
                       {/* eslint-disable-next-line react/jsx-props-no-spreading */}
-                      <input type="date" className="form-control" {...register('date_to')} />
+                      <input type="date" className="form-control" {...register('date_to', { required: true })} />
+                      {errors.date_to && <span>This date is required</span>}
                     </div>
                   </div>
                   <div className="m-3">
