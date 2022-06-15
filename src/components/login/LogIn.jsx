@@ -68,7 +68,7 @@ const LogIn = () => {
         <span className={classes.error_message}>{errorMessage}</span>
         <Form onSubmit={(e) => loginUser(e)}>
           <Form.Group className="mb-3" controlId="formBasicEmail">
-            <Form.Label>Email address</Form.Label>
+            <Form.Label>Email Address</Form.Label>
             <span>*</span>
             <Form.Control
               type="email"

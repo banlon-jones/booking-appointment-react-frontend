@@ -1,4 +1,5 @@
 import React from 'react';
+import { render, screen } from '@testing-library/react';
 import renderer from 'react-test-renderer';
 import { Provider } from 'react-redux';
 import configureStore from 'redux-mock-store';
@@ -22,5 +23,27 @@ describe('snapshots', () => {
       )
       .toJSON();
     expect(tree).toMatchSnapshot();
+  });
+
+  describe('form fields rendering', () => {
+    beforeEach(() => {
+      render(
+        <Provider store={store}>
+          <Router>
+            <LogIn />
+          </Router>
+        </Provider>,
+      );
+    });
+
+    it("renders with 'Email' text", () => {
+      const emailField = screen.getAllByLabelText('Email Address');
+      expect(emailField[0]).toBeInTheDocument();
+    });
+
+    it("renders with 'Password' field", () => {
+      const passwordField = screen.getAllByLabelText('Password');
+      expect(passwordField[0]).toBeInTheDocument();
+    });
   });
 });

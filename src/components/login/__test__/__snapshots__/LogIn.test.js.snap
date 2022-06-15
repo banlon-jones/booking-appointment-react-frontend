@@ -27,7 +27,7 @@ exports[`snapshots matches LogIn snapshot 1`] = `
           className="form-label"
           htmlFor="formBasicEmail"
         >
-          Email address
+          Email Address
         </label>
         <span>
           *
