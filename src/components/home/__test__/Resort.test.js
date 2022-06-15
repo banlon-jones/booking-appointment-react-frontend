@@ -11,8 +11,8 @@ describe('Resorts snapshots', () => {
   const resort = {
     id: 1,
     name: 'Resort Name',
-    image:'image_url',
-  }
+    image: 'image_url',
+  };
   const initialState = { resorts: [] };
   const mockStore = configureStore();
   let store;
