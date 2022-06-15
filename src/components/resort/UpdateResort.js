@@ -41,7 +41,7 @@ function UpdateResort() {
   };
 
   return (
-    <div className={AddResort.add_resort_container}>
+    <div className={AddResort.add_resort_container} data-testid="Update-resort">
       <Notification showNotice={showNotice} message={message} />
       <h1>Update Resort</h1>
       <Form updateResortValue={updateResortValue} formId="update" />
