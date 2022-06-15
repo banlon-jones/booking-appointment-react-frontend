@@ -25,7 +25,7 @@ function Resort() {
   const user = useSelector((state) => state.user);
   const resortDetails = useSelector(selectResort);
   return (
-    <div className={resortClass.resort_container}>
+    <div className={resortClass.resort_container} data-testid="Resort-details">
       <div className={resortClass.inner_container}>
         <div className={resortClass.image_container}>
           <img src={resortDetails.image} alt="logo" />
