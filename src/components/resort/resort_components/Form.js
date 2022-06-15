@@ -1,6 +1,7 @@
 /* eslint-disable react/prop-types */
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
+import { useParams } from 'react-router-dom';
 import AddResort from '../AddResort.module.css';
 import {
   selectResort,
@@ -10,26 +11,27 @@ import {
 // Button description: variable
 let buttonDescription = '';
 
-function Form(props) {
+const Form = (props) => {
   const { formId } = props;
   const { addResort } = props;
   const { updateResortValue } = props;
+  const { updateId } = useParams();
 
   const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(getResort());
+    dispatch(getResort(updateId));
   }, []);
 
   const resortDetails = useSelector(selectResort);
 
-  function setRestoreValue(el) {
+  const setRestoreValue = (el) => {
     let result = '';
     if (formId !== 'add') {
       result = resortDetails[el];
     }
     return result;
-  }
+  };
 
   if (formId === 'add') {
     buttonDescription = 'Add Resort';
@@ -90,6 +92,6 @@ function Form(props) {
       </form>
     </>
   );
-}
+};
 
 export default Form;
