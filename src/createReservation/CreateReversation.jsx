@@ -4,6 +4,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { useForm } from 'react-hook-form';
 import { resortsFetched } from '../store/resorts/resortsSlice';
 import { createReservation } from '../store/reservation/reservation';
+import { setRole } from '../store/user/user';
 
 const CreateReservation = () => {
   const {
@@ -13,7 +14,6 @@ const CreateReservation = () => {
   const dispatch = useDispatch();
 
   const onSubmit = (data) => {
-    console.log(data);
     dispatch(createReservation(data));
   };
   const fetchResorts = async () => {
@@ -29,12 +29,14 @@ const CreateReservation = () => {
         return;
       }
       dispatch(resortsFetched(data));
+      // eslint-disable-next-line no-empty
     } catch (err) {
-      console.log(err);
+
     }
   };
   useEffect(() => {
     fetchResorts();
+    dispatch(setRole());
   }, []);
 
   return (

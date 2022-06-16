@@ -8,7 +8,7 @@ import { createReservation } from '../../store/reservation/reservation';
 
 const ResortDetails = () => {
   const { register, handleSubmit, formState: { errors } } = useForm();
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
   const dispatch = useDispatch();
   const [show, setShow] = useState(false);
 
@@ -18,7 +18,7 @@ const ResortDetails = () => {
   const { id } = useParams();
   const onSubmit = (data) => {
     dispatch(createReservation({ ...data, resort_id: id }));
-    navigate('/reservations');
+    // navigate('/reservations');
   };
   return (
     <div className="container">

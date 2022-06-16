@@ -34,7 +34,6 @@ const ResortsToDelete = () => {
   };
 
   const deleteResort = async (id) => {
-    console.log('resort id is: ', id);
     await axios({
       url: `https://resorts-booking-api.herokuapp.com/resorts/${id}`,
       method: 'DELETE',

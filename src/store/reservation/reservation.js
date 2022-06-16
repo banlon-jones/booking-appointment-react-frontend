@@ -4,7 +4,6 @@ import { create, fetchReservation } from '../../services/reservation/reservation
 export const createReservation = createAsyncThunk('createReservation', async (reservation) => {
   if (sessionStorage.getItem('JwtAccessToken')) {
     const data = await create(reservation);
-    alert('reservation successfully created');
     return data;
   }
   return null;

@@ -4,7 +4,7 @@
 
 .login_container {
   border: solid transparent;
-  padding: 0 30vw;
+  padding: 0 20vw;
   height: 100vh;
 }
 
@@ -58,13 +58,13 @@ span {
 
 @media screen and (max-width: 1200px) {
   .login_container {
-    padding: 0 20vw;
+    padding: 0 1vw;
   }
 }
 
 @media screen and (max-width: 992px) {
   .login_container {
-    padding: 0 10vw;
+    padding: 0 1vw;
   }
 }
 

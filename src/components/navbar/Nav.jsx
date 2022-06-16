@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import { Link } from 'react-router-dom';
 import { logOutUser } from '../../store/user/user';
-import logo from '../logo.jpg';
 import './Nav.css';
 
 const Nav = () => {
@@ -21,7 +20,7 @@ const Nav = () => {
               : 'nav-icons-holder nav-mobile-border'
           }
         >
-          <img src={logo} alt="Logo" className="logo" />
+          <h4>Resort Booking</h4>
           <div className="nav-btn-holder">
             {!loggedIn && (
               <>

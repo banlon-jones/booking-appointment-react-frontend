@@ -14,7 +14,6 @@ export const create = async (reservationPayload) => {
     );
     return data;
   } catch (e) {
-    console.log(e);
     return null;
   }
 };
@@ -32,7 +31,6 @@ export const fetchReservation = async () => {
     );
     return data;
   } catch (e) {
-    console.log(e);
     return null;
   }
 };

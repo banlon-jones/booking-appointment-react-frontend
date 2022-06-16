@@ -9,7 +9,7 @@ import resortClass from '../ResortDetails.module.css';
 import { createReservation } from '../../../store/reservation/reservation';
 
 function ReserveResort() {
-  const { register, handleSubmit } = useForm();
+  const { register, handleSubmit, formState: { errors } } = useForm();
   const navigate = useNavigate();
   const dispatch = useDispatch();
   const user = useSelector((state) => state.user);
@@ -56,8 +56,9 @@ function ReserveResort() {
                     type="date"
                     id="from"
                     className="form-control"
-                    {...register('date_from')}
+                    {...register('date_from', { required: true })}
                   />
+                  {errors.date_from && <span>This date is required</span>}
                 </div>
                 <div className="col-12">
                   <p> To </p>
@@ -65,8 +66,9 @@ function ReserveResort() {
                   <input
                     type="date"
                     className="form-control"
-                    {...register('date_to')}
+                    {...register('date_to', { required: true })}
                   />
+                  {errors.date_to && <span>This date is required</span>}
                 </div>
               </div>
               <div className="m-3">

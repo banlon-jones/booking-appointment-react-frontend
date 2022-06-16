@@ -187,6 +187,7 @@ footer {
 
   .nav-icons-holder {
     justify-content: space-around;
+    flex-direction: column;
   }
 
   .nav-mobile-border {
