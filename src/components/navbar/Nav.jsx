@@ -9,6 +9,7 @@ const Nav = () => {
   const dispatch = useDispatch();
   const [isMobile, setIsMobile] = useState(false);
   const { loggedIn } = useSelector((state) => state.user);
+  const { role } = useSelector((state) => state.user);
 
   return (
     <div className="navigation-panel">
@@ -25,12 +26,12 @@ const Nav = () => {
             {!loggedIn && (
               <>
                 <Link to="/login">
-                  <button className="button-sign-log" type="submit">
+                  <button className="button-sign-log" type="button">
                     Log in
                   </button>
                 </Link>
                 <Link to="/sign-up">
-                  <button className="button-sign-log" type="submit">
+                  <button className="button-sign-log" type="button">
                     Sign up
                   </button>
                 </Link>
@@ -56,30 +57,54 @@ const Nav = () => {
         <nav>
           <ul className={isMobile ? 'show-mobile-menu' : 'hide-mobile-menu'}>
             <li className="nav-list">
-              <Link className="nav-link link-style" to="/resorts">
+              <Link
+                className="nav-link link-style"
+                to="/resorts"
+                onClick={() => setIsMobile(!isMobile)}
+              >
                 Resorts
               </Link>
             </li>
             <li className="nav-list">
-              <Link className="nav-link link-style" to="/reserve">
+              <Link
+                className="nav-link link-style"
+                to="/reserve"
+                onClick={() => setIsMobile(!isMobile)}
+              >
                 Reserve
               </Link>
             </li>
             <li className="nav-list">
-              <Link className="nav-link link-style" to="/reservations">
+              <Link
+                className="nav-link link-style"
+                to="/reservations"
+                onClick={() => setIsMobile(!isMobile)}
+              >
                 My reservations
               </Link>
             </li>
-            <li className="nav-list">
-              <Link className="nav-link link-style" to="/addItem">
-                Add resort
-              </Link>
-            </li>
-            <li className="nav-list">
-              <Link className="nav-link link-style" to="/deleteResorts">
-                Delete resort
-              </Link>
-            </li>
+            {role === 'admin' && (
+              <>
+                <li className="nav-list">
+                  <Link
+                    className="nav-link link-style"
+                    to="/addItem"
+                    onClick={() => setIsMobile(!isMobile)}
+                  >
+                    Add resort
+                  </Link>
+                </li>
+                <li className="nav-list">
+                  <Link
+                    className="nav-link link-style"
+                    to="/deleteResorts"
+                    onClick={() => setIsMobile(!isMobile)}
+                  >
+                    Delete resort
+                  </Link>
+                </li>
+              </>
+            )}
             <li>
               <button
                 className="button-sign-logout"

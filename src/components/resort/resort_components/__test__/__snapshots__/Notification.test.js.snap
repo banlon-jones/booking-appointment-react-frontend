@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Notification Snapshot renders correctly 1`] = `
+<div
+  className="notice_container"
+  data-testid="notice"
+  style={
+    Object {
+      "display": "none",
+    }
+  }
+/>
+`;

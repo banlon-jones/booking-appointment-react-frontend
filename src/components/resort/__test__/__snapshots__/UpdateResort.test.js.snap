@@ -1,0 +1,84 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Add Resort Snapshot renders correctly 1`] = `
+<div
+  className="add_resort_container"
+  data-testid="Update-resort"
+>
+  <div
+    className="notice_container"
+    data-testid="notice"
+    style={
+      Object {
+        "display": "none",
+      }
+    }
+  >
+    <p
+      className="notification"
+      style={
+        Object {
+          "backgroundColor": " ",
+        }
+      }
+    >
+       
+    </p>
+  </div>
+  <h1>
+    Update Resort
+  </h1>
+  <form
+    className="form"
+    data-testid="form"
+    onSubmit={[Function]}
+  >
+    <input
+      name="name"
+      placeholder="Name"
+      type="text"
+    />
+    <input
+      name="country"
+      placeholder="Country"
+      type="text"
+    />
+    <input
+      name="city"
+      placeholder="City"
+      type="text"
+    />
+    <textarea
+      col="50"
+      name="description"
+      placeholder="Resort description"
+      row="50"
+    />
+    <input
+      name="cost"
+      placeholder="Cost"
+      type="text"
+    />
+    <div
+      className="file"
+    >
+      <span
+        className="label"
+      >
+        Choose a resort image:
+      </span>
+      <input
+        className="image_input"
+        name="image"
+        type="url"
+      />
+    </div>
+    <button
+      className="button_resort_add"
+      type="submit"
+    >
+      Update Resort
+    </button>
+  </form>
+</div>
+`;
