@@ -1,0 +1,118 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`snapshots matches LogIn snapshot 1`] = `
+<div
+  className="navigation-panel"
+>
+  <header>
+    <div
+      className="nav-icons-holder nav-mobile-border"
+    >
+      <img
+        alt="Logo"
+        className="logo"
+        src="logo.jpg"
+      />
+      <div
+        className="nav-btn-holder"
+      >
+        <a
+          href="/login"
+          onClick={[Function]}
+        >
+          <button
+            className="button-sign-log"
+            type="button"
+          >
+            Log in
+          </button>
+        </a>
+        <a
+          href="/sign-up"
+          onClick={[Function]}
+        >
+          <button
+            className="button-sign-log"
+            type="button"
+          >
+            Sign up
+          </button>
+        </a>
+      </div>
+    </div>
+  </header>
+  <footer
+    className="hide-mobile-menu"
+  >
+    <ul
+      className="footer-ul ul-style"
+    >
+      <li
+        className="social-media-list"
+      >
+        <a
+          className="social-media-link link-style"
+          href="/https://twitter.com/"
+          onClick={[Function]}
+        >
+          <i
+            className="fab fa-twitter"
+          />
+        </a>
+      </li>
+      <li
+        className="social-media-list"
+      >
+        <a
+          className="social-media-link link-style"
+          href="/https://www.facebook.com"
+          onClick={[Function]}
+        >
+          <i
+            className="fab fa-facebook-f"
+          />
+        </a>
+      </li>
+      <li
+        className="social-media-list"
+      >
+        <a
+          className="social-media-link link-style"
+          href="/https://www.google.com/"
+          onClick={[Function]}
+        >
+          <i
+            className="fab fa-google-plus-g"
+          />
+        </a>
+      </li>
+      <li
+        className="social-media-list"
+      >
+        <a
+          className="social-media-link link-style"
+          href="/https://vine.co/"
+          onClick={[Function]}
+        >
+          <i
+            className="fab fa-vine"
+          />
+        </a>
+      </li>
+      <li
+        className="social-media-list"
+      >
+        <a
+          className="social-media-link link-style"
+          href="/https://www.pinterest.com/"
+          onClick={[Function]}
+        >
+          <i
+            className="fab fa-pinterest-p"
+          />
+        </a>
+      </li>
+    </ul>
+  </footer>
+</div>
+`;
