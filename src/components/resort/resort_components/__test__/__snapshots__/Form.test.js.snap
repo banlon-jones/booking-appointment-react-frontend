@@ -9,27 +9,32 @@ exports[`AddResort Snapshot renders correctly 1`] = `
   <input
     name="name"
     placeholder="Name"
+    required={true}
     type="text"
   />
   <input
     name="country"
     placeholder="Country"
+    required={true}
     type="text"
   />
   <input
     name="city"
     placeholder="City"
+    required={true}
     type="text"
   />
   <textarea
     col="50"
     name="description"
     placeholder="Resort description"
+    required={true}
     row="50"
   />
   <input
     name="cost"
     placeholder="Cost"
+    required={true}
     type="text"
   />
   <div
@@ -43,6 +48,7 @@ exports[`AddResort Snapshot renders correctly 1`] = `
     <input
       className="image_input"
       name="image"
+      required={true}
       type="url"
     />
   </div>

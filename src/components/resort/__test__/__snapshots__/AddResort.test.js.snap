@@ -37,18 +37,21 @@ exports[`Add Resort Snapshot renders correctly 1`] = `
       defaultValue=""
       name="name"
       placeholder="Name"
+      required={true}
       type="text"
     />
     <input
       defaultValue=""
       name="country"
       placeholder="Country"
+      required={true}
       type="text"
     />
     <input
       defaultValue=""
       name="city"
       placeholder="City"
+      required={true}
       type="text"
     />
     <textarea
@@ -56,12 +59,14 @@ exports[`Add Resort Snapshot renders correctly 1`] = `
       defaultValue=""
       name="description"
       placeholder="Resort description"
+      required={true}
       row="50"
     />
     <input
       defaultValue=""
       name="cost"
       placeholder="Cost"
+      required={true}
       type="text"
     />
     <div
@@ -70,12 +75,13 @@ exports[`Add Resort Snapshot renders correctly 1`] = `
       <span
         className="label"
       >
-        Choose a resort image:
+        Enter Resort Image URl:
       </span>
       <input
         className="image_input"
         defaultValue=""
         name="image"
+        required={true}
         type="url"
       />
     </div>

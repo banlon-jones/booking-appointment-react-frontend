@@ -8,11 +8,9 @@ exports[`snapshots matches LogIn snapshot 1`] = `
     <div
       className="nav-icons-holder nav-mobile-border"
     >
-      <img
-        alt="Logo"
-        className="logo"
-        src="logo.jpg"
-      />
+      <h4>
+        Resort Booking
+      </h4>
       <div
         className="nav-btn-holder"
       >
