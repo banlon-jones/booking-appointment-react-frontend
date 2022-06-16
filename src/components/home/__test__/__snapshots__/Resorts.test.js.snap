@@ -1,0 +1,82 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Resorts snapshots matches Resorts snapshot 1`] = `
+<div
+  className="resorts_container"
+>
+  <div
+    className="resorts_header"
+  >
+    <h1>
+      Most Visited Resorts
+    </h1>
+    <p>
+      Please select a resort to visit.
+    </p>
+  </div>
+  <div
+    className="current_resorts_container"
+  >
+    <button
+      className="prev_disabled"
+      disabled={true}
+      onClick={[Function]}
+      type="button"
+    >
+      <svg
+        fill="currentColor"
+        height="1em"
+        stroke="currentColor"
+        strokeWidth="0"
+        style={
+          Object {
+            "color": undefined,
+          }
+        }
+        viewBox="0 0 24 24"
+        width="1em"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <polyline
+          fill="none"
+          points="7 2 17 12 7 22"
+          stroke="#000"
+          strokeWidth="2"
+          transform="matrix(-1 0 0 1 24 0)"
+        />
+      </svg>
+    </button>
+    <ul
+      className="current_resorts_list"
+    />
+    <button
+      className="next_disabled"
+      disabled={true}
+      onClick={[Function]}
+      type="button"
+    >
+      <svg
+        fill="currentColor"
+        height="1em"
+        stroke="currentColor"
+        strokeWidth="0"
+        style={
+          Object {
+            "color": undefined,
+          }
+        }
+        viewBox="0 0 24 24"
+        width="1em"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <polyline
+          fill="none"
+          points="7 2 17 12 7 22"
+          stroke="#000"
+          strokeWidth="2"
+        />
+      </svg>
+    </button>
+  </div>
+</div>
+`;
