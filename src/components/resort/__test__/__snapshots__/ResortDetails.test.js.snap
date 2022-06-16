@@ -46,6 +46,11 @@ exports[`Add Resort Snapshot renders correctly 1`] = `
           className="button_container"
           data-testid="reserve-button"
           onClick={[Function]}
+          style={
+            Object {
+              "display": "none",
+            }
+          }
           type="button"
         >
           Reserve
