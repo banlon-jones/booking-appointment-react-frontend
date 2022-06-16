@@ -13,22 +13,42 @@
 - Redux
 - React-BootStrap
 
+## Logging In
+
+- To log in as admin use email: `admin@gmail.com` and password: `password`
+- To log as a user sign up from the navigation panel.
+
 ## Live Demo
+
 [View live](https://resorts-booking.netlify.app/)
+
+## API
+
+[Resorts API](https://resorts-booking-api.herokuapp.com)
+
+## Kanban Board
+
+[Initial State](https://user-images.githubusercontent.com/89528737/171438768-5eff1421-320a-461e-b476-7651b4ed4897.png)
+
+[Current State](https://github.com/banlon-jones/booking-appointment-rails-backend/projects/1)
+
+## Final Team Size
+
+- We are a team of five developers.
 
 ## Getting Started
 
 To run this application please follow these steps:
 
-- Install Node.js ^14.0
+- Install Node.js ^16.15.1
 - clone the repository by running\
-    `git clone https://github.com/banlon-jones/booking-appointment-react-frontend`
+   `git clone https://github.com/banlon-jones/booking-appointment-react-frontend`
 - navigate to the folder\
-    `cd booking-appointment-react-frontend`
+   `cd booking-appointment-react-frontend`
 - Install packages\
-    `npm install`
+   `npm install`
 - run the application\
-    `npm start`
+   `npm start`
 
 ## Authors
 
@@ -80,4 +100,3 @@ Give a ⭐️ if you like this project!
 ## 📝 License
 
 This project is [MIT](./MIT.md) licensed.
-
