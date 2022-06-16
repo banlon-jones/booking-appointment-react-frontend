@@ -20,7 +20,9 @@ const Form = (props) => {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(getResort(updateId));
+    if (formId !== 'add') {
+      dispatch(getResort(updateId));
+    }
   }, []);
 
   const resortDetails = useSelector(selectResort);
@@ -81,7 +83,7 @@ const Form = (props) => {
           defaultValue={setRestoreValue('cost')}
         />
         <div className={AddResort.file}>
-          <span className={AddResort.label}>Choose a resort image:</span>
+          <span className={AddResort.label}>Enter Resort Image URl:</span>
           <input
             className={AddResort.image_input}
             type="url"

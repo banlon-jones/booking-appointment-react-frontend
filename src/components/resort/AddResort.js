@@ -34,7 +34,9 @@ function resortAdd() {
     }, 3000);
 
     setTimeout(() => {
-      navigate('/resorts');
+      if (message !== 'Could not add resort') {
+        navigate('/resorts');
+      }
     }, 5000);
   };
 
