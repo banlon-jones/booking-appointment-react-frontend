@@ -1,3 +1,4 @@
+/* eslint-disable object-curly-newline */
 /* eslint-disable comma-dangle */
 import React from 'react';
 import { cleanup, screen, render } from '@testing-library/react';
@@ -10,7 +11,7 @@ import ResortDetails from '../ResortDetails';
 afterEach(cleanup);
 
 describe('React Test for AddResort', () => {
-  test('Add RssortTest', () => {
+  test('Add RssortTest', async () => {
     render(
       <BrowserRouter>
         <Provider store={store}>
@@ -18,8 +19,9 @@ describe('React Test for AddResort', () => {
         </Provider>
       </BrowserRouter>
     );
-    const ResortElement = screen.getByTestId('Resort-details');
-    expect(ResortElement).toBeInTheDocument('City');
+
+    const ResortElement = await screen.getByTestId('Resort-details');
+    expect(ResortElement).toBeInTheDocument();
   });
 });
 
