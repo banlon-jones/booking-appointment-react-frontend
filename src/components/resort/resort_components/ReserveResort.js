@@ -3,7 +3,7 @@ import React, { useState } from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 import Modal from 'react-bootstrap/Modal';
 import { useForm } from 'react-hook-form';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import resortClass from '../ResortDetails.module.css';
 // eslint-disable-next-line no-unused-vars
 import { createReservation } from '../../../store/reservation/reservation';
@@ -12,6 +12,7 @@ function ReserveResort() {
   const { register, handleSubmit } = useForm();
   const navigate = useNavigate();
   const dispatch = useDispatch();
+  const user = useSelector((state) => state.user);
   const [show, setShow] = useState(false);
 
   const handleClose = () => setShow(false);
@@ -27,6 +28,7 @@ function ReserveResort() {
   return (
     <>
       <button
+        style={{ display: user.role === '' ? 'none' : 'block' }}
         type="button"
         className={resortClass.button_container}
         onClick={handleShow}
