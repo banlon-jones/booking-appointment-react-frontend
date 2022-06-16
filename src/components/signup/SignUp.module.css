@@ -1,0 +1,75 @@
+.register_container * {
+  font-size: 2rem;
+}
+
+.register_container {
+  border: solid transparent;
+  padding: 0 20vw;
+  height: 100vh;
+}
+
+.form_container {
+  margin-top: 5rem;
+  padding: 1rem;
+  box-shadow: 0 0.7rem 0.9rem black;
+  border-radius: 1rem;
+  background-image: url('../../assets/images/splash-screen.webp');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: #0e81ab;
+  background-blend-mode: soft-light;
+}
+
+.form_title {
+  font-size: 3rem;
+  text-align: center;
+}
+
+label {
+  font-weight: bold;
+}
+
+input {
+  padding: 1.2rem !important;
+  border-radius: 1rem !important;
+  -webkit-border-radius: 1rem !important;
+  -moz-border-radius: 1rem !important;
+  -ms-border-radius: 1rem !important;
+  -o-border-radius: 1rem !important;
+}
+
+span {
+  color: red;
+}
+
+.error_message {
+  display: inline-block;
+  width: 100%;
+  color: white;
+  background-color: rgba(255, 0, 0, 0.333);
+  text-align: center;
+}
+
+.submit_btn {
+  display: block;
+  margin-inline: auto;
+  padding: 0.5rem 3rem;
+}
+
+@media screen and (max-width: 1200px) {
+  .register_container {
+    padding: 0 1vw;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .register_container {
+    padding: 0 1vw;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .register_container {
+    padding: 0;
+  }
+}

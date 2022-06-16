@@ -1,0 +1,95 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Add Resort Snapshot renders correctly 1`] = `
+<div
+  className="resort_container"
+  data-testid="Resort-details"
+>
+  <div
+    className="inner_container"
+  >
+    <div
+      className="image_container"
+    >
+      <img
+        alt="logo"
+      />
+    </div>
+    <div
+      className="resort_details_container"
+    >
+      <h1 />
+      <ul>
+        <li>
+          Country:
+          <span />
+        </li>
+        <li>
+          City:
+          <span />
+        </li>
+        <li>
+          Description:
+          <p />
+        </li>
+        <li>
+          Cost per day:
+          <span>
+            $undefined
+          </span>
+        </li>
+      </ul>
+      <div
+        className="button_main_container"
+      >
+        <button
+          className="button_container"
+          data-testid="reserve-button"
+          onClick={[Function]}
+          style={
+            Object {
+              "display": "none",
+            }
+          }
+          type="button"
+        >
+          Reserve
+        </button>
+        <div />
+        <button
+          className="button_container"
+          onClick={[Function]}
+          style={
+            Object {
+              "display": "none",
+            }
+          }
+          type="button"
+        >
+          Update
+          <svg
+            className="icon"
+            fill="currentColor"
+            height="1em"
+            stroke="currentColor"
+            strokeWidth="0"
+            style={
+              Object {
+                "color": undefined,
+              }
+            }
+            viewBox="0 0 16 16"
+            width="1em"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M4.646 1.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1 0 .708l-6 6a.5.5 0 0 1-.708-.708L10.293 8 4.646 2.354a.5.5 0 0 1 0-.708z"
+              fillRule="evenodd"
+            />
+          </svg>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+`;
