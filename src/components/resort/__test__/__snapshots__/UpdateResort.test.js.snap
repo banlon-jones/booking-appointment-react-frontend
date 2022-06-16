@@ -65,7 +65,7 @@ exports[`Add Resort Snapshot renders correctly 1`] = `
       <span
         className="label"
       >
-        Choose a resort image:
+        Enter Resort Image URl:
       </span>
       <input
         className="image_input"
