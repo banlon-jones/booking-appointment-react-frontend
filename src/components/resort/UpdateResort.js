@@ -36,7 +36,9 @@ function UpdateResort() {
     }, 3000);
 
     setTimeout(() => {
-      navigate(`/resorts/${updateId}`);
+      if (message !== 'Could not update resort') {
+        navigate(`/resorts/${updateId}`);
+      }
     }, 5000);
   };
 

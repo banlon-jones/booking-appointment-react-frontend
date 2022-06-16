@@ -33,7 +33,7 @@ exports[`Add Resort Snapshot renders correctly 1`] = `
           <p />
         </li>
         <li>
-          Cost:
+          Cost per day:
           <span>
             $undefined
           </span>

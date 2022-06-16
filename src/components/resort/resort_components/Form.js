@@ -20,7 +20,9 @@ const Form = (props) => {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    dispatch(getResort(updateId));
+    if (formId !== 'add') {
+      dispatch(getResort(updateId));
+    }
   }, []);
 
   const resortDetails = useSelector(selectResort);
@@ -53,18 +55,21 @@ const Form = (props) => {
           placeholder="Name"
           name="name"
           defaultValue={setRestoreValue('name')}
+          required
         />
         <input
           type="text"
           placeholder="Country"
           name="country"
           defaultValue={setRestoreValue('country')}
+          required
         />
         <input
           type="text"
           placeholder="City"
           name="city"
           defaultValue={setRestoreValue('city')}
+          required
         />
         <textarea
           placeholder="Resort description"
@@ -72,6 +77,7 @@ const Form = (props) => {
           row="50"
           name="description"
           defaultValue={setRestoreValue('description')}
+          required
         />
 
         <input
@@ -79,14 +85,16 @@ const Form = (props) => {
           placeholder="Cost"
           name="cost"
           defaultValue={setRestoreValue('cost')}
+          required
         />
         <div className={AddResort.file}>
-          <span className={AddResort.label}>Choose a resort image:</span>
+          <span className={AddResort.label}>Enter Resort Image URl:</span>
           <input
             className={AddResort.image_input}
             type="url"
             name="image"
             defaultValue={setRestoreValue('image')}
+            required
           />
         </div>
         <button type="submit" className={AddResort.button_resort_add}>

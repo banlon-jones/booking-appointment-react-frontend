@@ -47,7 +47,7 @@ function Resort() {
               <p>{resortDetails.description}</p>
             </li>
             <li>
-              Cost:
+              Cost per day:
               <span>{`$${resortDetails.cost}`}</span>
             </li>
           </ul>

@@ -1,4 +1,5 @@
 /* eslint-disable no-param-reassign */
+/* eslint-disable no-use-before-define */
 import { createSlice } from '@reduxjs/toolkit';
 
 const initialState = {
@@ -25,9 +26,9 @@ export const getResort = (id) => async (dispatch) => {
   try {
     const response = await fetch(url);
     const data = await response.json();
-    dispatch(resortDetailSlice.actions.isSuccess(data.resort));
+    dispatch(isSuccess(data.resort));
   } catch (error) {
-    dispatch(resortDetailSlice.actions.isFailure(error));
+    dispatch(isFailure(error));
   }
 };
 
