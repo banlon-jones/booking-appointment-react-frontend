@@ -5,13 +5,28 @@ import { cleanup, screen, render } from '@testing-library/react';
 import renderer from 'react-test-renderer';
 import { Provider } from 'react-redux';
 import { BrowserRouter } from 'react-router-dom';
+import axios from 'axios';
 import store from '../../../store/store';
 import ResortDetails from '../ResortDetails';
+
+jest.mock('axios');
 
 afterEach(cleanup);
 
 describe('React Test for AddResort', () => {
   test('Add RssortTest', async () => {
+    axios.get.mockImplementation(() => ({
+      data: {
+        name: 'Resort Name',
+        description: 'Resort Description',
+        image: 'https://resort.com/image.jpg',
+        price: '$100',
+        location: 'Resort Location',
+        id: '1',
+        isDeleted: false,
+      },
+    }));
+
     render(
       <BrowserRouter>
         <Provider store={store}>
@@ -20,8 +35,7 @@ describe('React Test for AddResort', () => {
       </BrowserRouter>
     );
 
-    const ResortElement = await screen.getByTestId('Resort-details');
-    expect(ResortElement).toBeInTheDocument();
+    expect(screen.findByText('Resort Name')).toBeTruthy();
   });
 });
 
